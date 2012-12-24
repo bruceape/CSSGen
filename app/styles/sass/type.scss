@@ -1,0 +1,33 @@
+html { -webkit-font-smoothing: antialiased; }
+
+body {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	color: $body-text;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 32px;
+	font-weight: 300;
+	margin: 0;
+	padding: .5em 0 .3em 0;
+	text-shadow: 0 0 64px $heading;
+	@media all and (min-width: $goldilocks) {
+		font-size: 48px;
+		text-shadow: 0 0 64px $heading;
+	}
+}
+
+h2 {
+	font-weight: 300;
+}
+
+a, a:link, a:visited {
+	color: white;
+}
+
+a:active, a:focus, a:hover {
+	color: gray;
+}

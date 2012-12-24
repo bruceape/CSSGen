@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "(╯°□°)╯︵ ʞooqǝɔɐɟ">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Text Shadow</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="scripts/vendor/modernizr.min.js"></script>
+    </head>
+    <body>
+    
+        <nav>
+            <ul id="menu" class="menu">
+                <li><a href="index.html" class="menu-item">Home</a></li>
+                <li><a href="snippets.html" class="menu-item">Snippets</a></li>
+                <li><a href="border-radius.html" class="menu-item">Border Radius</a></li>
+                <li><a href="box-shadow.html" class="menu-item">Box Shadow</a></li>
+                <li><a href="text-shadow.html" class="menu-item active-menu-item">Text Shadow</a></li>
+                <li><a href="columns.html" class="menu-item">Columns</a></li>
+            </ul>
+            <a href="#" id="menu-link" class="menu-link">&#9776;</a>
+        </nav>
+
+        <header class="main-header">
+            <h1>Text Shadow</h1>
+        </header>
+
+        <div class="wrapper">
+            <div class="text-shadow-controls">
+                <div class="control-panel">
+                    <div class="widget">
+                        <p class="label">Direction</p>
+                        <div class="controls">
+                            <div class="counter">
+                                <p class="name">X</p>
+                                <div class="counter-container">
+                                    <div id="ts-x-increment" class="increment">Incrementing!</div>
+                                    <input type="number" pattern="[0-9]*" value="0" id="ts-x-field" class="field">
+                                    <div id="ts-x-decrement" class="decrement">Decrementing!</div>
+                                </div>
+                            </div>
+                            <div class="counter">
+                                <p class="name">Y</p>
+                                <div class="counter-container">
+                                    <div id="ts-y-increment" class="increment">Incrementing!</div>
+                                    <input type="number" pattern="[0-9]*" value="0" id="ts-y-field" class="field">
+                                    <div id="ts-y-decrement" class="decrement">Decrementing!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <p class="label">Blur</p>
+                        <div class="controls">
+                            <input type="range" id="ts-blur" value="0" class='slider'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-shadow-preview">
+                <div id="ts-preview" class="preview">
+                    <p>give bruce pizza</p>
+                </div>
+            </div>
+
+            <div class="content">
+                <div id="ts-copy-button" class="copy-button">Copy</div>
+
+                <textarea id="ts-code" placeholder="Remember, give Bruce pizza!" class="copy-field"></textarea>
+                <article>
+                    <h2>Compatibility:</h2>
+                    <ul>
+                        <li>IE 10</li>
+                        <li>Firefox 3.5</li>
+                        <li>Opera 9.5</li>
+                        <li>Chrome 4</li>
+                        <li>Safari 3.2</li>
+                        <li>iOS Safari 3.2</li>
+                    </ul>
+                    <h2>Text Shadow</h2>
+                    <p>Another useful CSS3 feature is Text Shadow. The name is very descriptive…it makes text have a shadow. It works very similarly to Box Shadow. Before text shadow existed, an image of text had to be used. Now we have the freedom to style text the way we want. The syntax is simple and similar to Box Shadow.</p>
+                    <pre><code>text-shadow: 4px 2px 6px blue;
+/* 4px right, 2px down, 6px blur, color blue */</code></pre>
+                    <p>The syntax is simple, and just like that of Box Shadow. Also, like Box Shadow, you can stack multiple shadows with a comma.</p>
+                    <pre><code>text-shadow: 4px 2px 6px blue,
+/* 4px right, 2px down, 6px blur, color blue */
+             7px 0 2px green;
+/* 7px right, 0px down, 2px blur, color green.</code></pre>
+                    <p>As you can see, the syntax is almost identetical to Box Shadow. Once you remember the pattern for one, you can easily remember the pattern for the other.</p>
+                    <p>Text Shadow is safe to use in most modern browsers, and works without vendor prefixes. Text Shadow doesn't work at all in older versions of IE, so if the functionality of the site depends on Text Shadow for some reason, it's not recomended. Otherwise, go for it!</p>
+                </article>
+            </div>
+        </div>
+        <div id="copy-helper" class="copy-helper">&#8984;+C to Copy</div>
+
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
+        
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    
+        <!-- build:js scripts/amd-app.js -->
+        <script data-main="scripts/main" src="scripts/vendor/require.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

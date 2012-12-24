@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "(╯°□°)╯︵ ʞooqǝɔɐɟ">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Columns</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="scripts/vendor/modernizr.min.js"></script>
+    </head>
+    <body>
+    
+        <nav>
+            <ul id="menu" class="menu">
+                <li><a href="index.html" class="menu-item">Home</a></li>
+                <li><a href="snippets.html" class="menu-item">Snippets</a></li>
+                <li><a href="border-radius.html" class="menu-item">Border Radius</a></li>
+                <li><a href="box-shadow.html" class="menu-item">Box Shadow</a></li>
+                <li><a href="text-shadow.html" class="menu-item">Text Shadow</a></li>
+                <li><a href="columns.html" class="menu-item active-menu-item">Columns</a></li>
+            </ul>
+            <a href="#" id="menu-link" class="menu-link">&#9776;</a>
+        </nav>
+
+        <header class="main-header">
+            <h1>Columns</h1>
+        </header>
+
+        <div class="wrapper">
+            <div class="column-controls">
+                <div class="control-panel">
+                    <div class="widget">
+                        <p class="label">Column</p>
+                        <div class="controls">
+                            <div class="counter">
+                                <div class="counter-container">
+                                    <div id="col-count-increment" class="increment">Incrementing!</div>
+                                    <input type="number" pattern="[0-9]*" value="0" id="col-count-field" class="field">
+                                    <div id="col-count-decrement" class="decrement">Decrementing!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <p class="label">Gap</p>
+                        <div class="controls">
+                            <div class="counter">
+                                <div class="counter-container">
+                                    <div id="col-gap-increment" class="increment">Incrementing!</div>
+                                    <input type="number" pattern="[0-9]*" value="0" id="col-gap-field" class="field">
+                                    <div id="col-gap-decrement" class="decrement">Decrementing!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns-preview">
+                <div id="col-preview" class="preview">
+                    <p>This is a bunch of text, and we are going to make it work in multiple columns! What up! Yankee doodle went to town, riding on a pony, stuck a feather in his hat and called it macaroni. Yankee Doodle, give me all the macaroni you've got.</p>
+                </div>     
+            </div>
+
+            <div class="content">
+                <div id="col-copy-button" class="copy-button">Copy</div>
+
+                <textarea id="col-code" placeholder="Remember, give Bruce pizza!" class="copy-field"></textarea>
+                <article>
+                    <h2>Compatibility:</h2>
+                    <ul>
+                        <li>IE 10</li>
+                        <li>Firefox 2</li>
+                        <li>Opera 11.1</li>
+                        <li>Chrome 4</li>
+                        <li>Safari 3.1</li>
+                        <li>iOS Safari 3.2</li>
+                    </ul>
+                    <h2>Columns</h2>
+                    <p>CSS3 Columns is a sweet feature that allows us to break text into multiple columns for easier reading. It's a godsend to typography on the web, and awesome that it's here for us to use. The syntax is simple. I've neglected to include the short hand, because I find that often, it isn't needed.</p>
+                    <pre><code>column-count: 2;
+/* Number of columns */
+column-gap: 5px;
+/* Space between columns */</code></pre>
+                    <p>It's pretty easy to remember. Count the columns, and specify a gap. It's that simple.</p>
+                    <p>Columns have partial support in most modern browsers. Firefox and Chrome/Safari still both need vendor prefixes to work. Internet Explorer and Opera have removed the prefixes.</p>
+                </article>
+            </div>
+        </div>
+        <div id="copy-helper" class="copy-helper">&#8984;+C to Copy</div>
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    
+        <!-- build:js scripts/amd-app.js -->
+        <script data-main="scripts/main" src="scripts/vendor/require.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

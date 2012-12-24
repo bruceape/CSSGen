@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "(╯°□°)╯︵ ʞooqǝɔɐɟ">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Border Radius</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="scripts/vendor/modernizr.min.js"></script>
+    </head>
+    <body>
+    
+        <nav>
+            <ul id="menu" class="menu">
+                <li><a href="index.html" class="menu-item">Home</a></li>
+                <li><a href="snippets.html" class="menu-item">Snippets</a></li>
+                <li><a href="border-radius.html" class="menu-item active-menu-item">Border Radius</a></li>
+                <li><a href="box-shadow.html" class="menu-item">Box Shadow</a></li>
+                <li><a href="text-shadow.html" class="menu-item">Text Shadow</a></li>
+                <li><a href="columns.html" class="menu-item">Columns</a></li>
+            </ul>
+            <a href="#" id="menu-link" class="menu-link">&#9776;</a>
+        </nav>
+
+        <header class="main-header">
+            <h1>Border Radius</h1>
+        </header>
+
+        <div class="wrapper">
+            <div class="border-radius-controls">
+                <div class="control-panel">
+                    <div class="widget">
+                        <p class="label">Units</p>
+                        <div class="controls">
+                            <div class="unit-switch">
+                                <input id="br-unittoggle" checked="checked" type="checkbox">
+                                <label><i></i></label>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="widget">
+                        <p class="label">Linked</p>
+                        <div class="controls">
+                            <div id="br-linked" class="onoff-switch">
+                                <input type="checkbox">
+                                <label><i></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-radius-preview">
+                <div class="counter top-left">
+                    <div id="br-tl-increment" class="increment">Incrementing!</div>
+                    <input type="number" pattern="[0-9]*" value="0" id="br-tl-field" class="field">
+                    <div id="br-tl-decrement" class="decrement">Decrementing!</div>
+                </div>
+
+                <div class="counter top-right">
+                    <div id="br-tr-increment" class="increment">Incrementing!</div>
+                    <input type="number" pattern="[0-9]*" value="0" id="br-tr-field" class="field">
+                    <div id="br-tr-decrement" class="decrement">Decrementing!</div>
+                </div>
+
+                <div id="br-preview" class="preview"></div>
+
+                <div class="counter bottom-left">
+                    <div id="br-bl-increment" class="increment">Incrementing!</div>
+                    <input type="number" pattern="[0-9]*" value="0" id="br-bl-field" class="field">
+                    <div id="br-bl-decrement" class="decrement">Decrementing!</div>
+                </div>
+
+                <div class="counter bottom-right">
+                    <div id="br-br-increment" class="increment">Incrementing!</div>
+                    <input type="number" pattern="[0-9]*" value="0" id="br-br-field" class="field">
+                    <div id="br-br-decrement" class="decrement">Decrementing!</div>
+                </div>        
+            </div>
+
+            <div class="content">
+                <div id="br-copy-button" class="copy-button">Copy</div>
+                <textarea id="br-code" placeholder="Remember, give Bruce pizza!" class="copy-field"></textarea>
+                <article>
+                    <h2>Compatibility:</h2>
+
+                    <ul>
+                        <li>IE 9</li>
+                        <li>Firefox 3.5</li>
+                        <li>Opera 10.5</li>
+                        <li>Chrome 5</li>
+                        <li>Safari 5</li>
+                        <li>iOS Safari 3.2</li>
+                    </ul>
+                    <h2>Border Radius</h2>
+                    <p>Border radius is one of the most useful features of CSS3. It allows the developer to make rounded corners on boxes without images. The syntax is thankfully very easy to remember.</p>
+                    <pre><code>border-radius: 4px; /* All corners will be rounded 4px */ </code></pre>
+                    <p>If you're looking to do different sized rounded corners for each corner, it's still fairly simple. Just add in where you want the corners to go.</p>
+                    <pre><code>border-top-left-radius: 4px;
+border-top-right-radius: 8px;</code></pre>
+                    <p>For the shorthand property, start at the top left, and go clockwise around. This is a common pattern among CSS properties, and definitely something to memorize.</p>
+                    <pre><code>border-radius: 2px 4px 6px 5px;
+/*  Top Left: 2px
+    Top Right: 4px
+    Bottom Right: 6px
+    Bottom Left: 5px */</code></pre>
+                    <p>Border Radius is super useful, and one of the most well supported features of CSS3. It can be used safely without vendor prefixes, and will degrade gracefully. Since Border Radius generally won't affect the user experience dramatically if it isn't supported, it's a great idea to use it now.</p>
+                </article>
+            </div>
+        </div>
+        <div id="copy-helper" class="copy-helper">&#8984;+C to Copy</div>
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
+        
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    
+        <!-- build:js scripts/amd-app.js -->
+        <script data-main="scripts/main" src="scripts/vendor/require.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

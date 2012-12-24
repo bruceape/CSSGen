@@ -1,0 +1,350 @@
+@mixin border {
+	position: relative;
+	&:after, &:before {
+		content: ' ';
+		position: absolute;
+		top: 100%;
+		left: 0;
+		margin-top: 1px;
+		background: rgba(0,0,0, .4);
+		height: 1px;
+		width: 100%;
+	}
+	&:before {
+		background: rgba(255,255,255, .3);
+		margin-top: 0;
+	}
+}
+
+@mixin no-select {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+@mixin select {
+   -moz-user-select: -moz-all;
+   -khtml-user-select: all;
+   -webkit-user-select: all;
+   -ms-user-select: all;
+   user-select: all;
+}
+
+@mixin image-replace {
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+}
+
+@mixin clearfix {
+    &:after {
+        content: ' ';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin switch($on, $off) {
+	-webkit-touch-callout: none;
+    width: 136px;
+    height: 38px;
+    padding: 3px 0;
+    position: relative;
+    display: block;
+    -webkit-transition: background 0.3s ease;
+    &:focus label i:after, &:hover label i:after{
+        background: lighten(#8bc558, 10);
+    }
+    input {
+    	position: absolute;
+    	width: 136px;
+    	height: 54px;
+    	z-index: 100;
+    	opacity: 0;
+        top: -6px;
+    	cursor: pointer;
+    	&:checked  ~ label i {
+    		left: auto;
+    		right: -2px;
+    	}
+    	&:checked  ~ label i:before {
+    		content: $on;
+    		right: 130%;
+    	}   	
+    	&:checked  ~ label i:after {
+    		content: $off;
+    	}
+    }
+    label {
+    	display: block;
+    	width: 100%;
+    	height: 100%;
+    	position: relative;
+    	border-radius: 3px;
+    	background: #FFFFFF;
+    	border: 2px solid #999999;
+    	i {
+    		display: block;
+    		height: 38px;
+    		width: 72px;
+    		position: absolute;
+    		top: -5px;
+    		left: -2px;
+    		z-index: 2;
+            background: -webkit-linear-gradient(270deg, #ffffff 0%,#009245 100%);
+            background: -moz-linear-gradient(270deg, #ffffff 0%,#009245 100%);
+            background: -o-linear-gradient(270deg, #ffffff 0%,#009245 100%);
+            background: -ms-linear-gradient(270deg, #ffffff 0%,#009245 100%);
+            background: linear-gradient(270deg, #ffffff 0%,#009245 100%);
+    		border-radius: 2px;
+    		&:after {
+    			content: $on;
+                color: white;
+    			position: absolute;
+    			width: 70px;
+    			text-align: center;
+    			left: 1px;
+                top: 1px;
+                padding: 8px 0 6px 0;
+                background: #8bc558;
+                border-radius: 2px;
+    			height: 22px;
+    			font-style: normal;
+    			font-family: Helvetica, Arial, sans-serif;
+    			font-size: 18px;
+    		}
+    		&:before {
+    			content: $off;
+    			position: absolute;
+    			top: 60%;
+    			right: -55%;
+    			margin: -14px 0 0 0;
+    			color: #999999; /* Fallback */
+    			font-style: normal;
+    			font-family: Helvetica, Arial, sans-serif;
+    			font-size: 18px;
+    		}
+    	}
+    }
+}
+
+@mixin triangle($direction) {
+    $top: 0;
+    $left: 0;
+    $second-top: 0;
+    $second-left: 0;
+    $margin: 0;
+
+    @if $direction == 'up'{
+        $top: 8px;
+        $left: 2px;
+        $second-top: 9px;
+        $second-left: 3px;
+        $margin: 16px auto 8px auto;
+    } @if $direction == 'down' {
+        $top: -20px;
+        $left: 2px;
+        $second-top: -19px;
+        $second-left: 3px;
+        $margin: 10px auto 6px auto;
+    }
+
+    cursor: pointer;
+    width: 36px;
+    height: 18px;
+    position: relative;
+    display: block;
+    margin: $margin;
+    @include image-replace;
+    -webkit-transform: scale(1, 1.5);
+    -moz-transform: scale(1, 1.5);
+    -o-transform: scale(1, 1.5);
+    -ms-transform: scale(1, 1.5);
+    transform: scale(1, 1.5);
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-transition: background 0.3s ease;
+    &:before {
+        content: ' ';
+        width: 32px;
+        height: 32px;
+        @if $direction == 'up' {
+            background: -webkit-linear-gradient(135deg, #ffffff 0%,#009245 50%, #ffffff 100%);
+            background: -moz-linear-gradient(135deg, #ffffff 0%,#009245 50%, #ffffff 100%);
+            background: -o-linear-gradient(135deg, #ffffff 0%,#009245 50%, #ffffff 100%);
+            background: -ms-linear-gradient(135deg, #ffffff 0%,#009245 50%, #ffffff 100%);
+            background: linear-gradient(135deg, #ffffff 0%,#009245 50%, #ffffff 100%);
+        }
+        @if $direction == 'down' {
+            background: -webkit-linear-gradient(135deg, #009245 0%,#ffffff 50%, #009245 100%);
+            background: -moz-linear-gradient(135deg, #009245 0%,#ffffff 50%, #009245 100%);
+            background: -o-linear-gradient(135deg, #009245 0%,#ffffff 50%, #009245 100%);
+            background: -ms-linear-gradient(135deg, #009245 0%,#ffffff 50%, #009245 100%);
+            background: linear-gradient(135deg, #009245 0%,#ffffff 50%, #009245 100%);
+        }
+        position: absolute;
+        top: $top;
+        left: $left;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    &:after {
+        content: ' ';
+        width: 30px;
+        height: 30px;
+        background: #8bc558;
+        position: absolute;
+        top: $second-top;
+        left: $second-left;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transition: background 0.3s ease;
+        -moz-transition: background 0.3s ease;
+        -o-transition: background 0.3s ease;
+        -ms-transition: background 0.3s ease;
+        transition: background 0.3s ease;
+    }
+    &:hover:after {
+        background: lighten(#8bc558, 10);
+    }
+}
+
+@mixin disabled-triangle($direction) {
+    $top: 0;
+    $left: 0;
+    $second-top: 0;
+    $second-left: 0;
+    $margin: 0;
+
+    @if $direction == 'up'{
+        $top: 24px;
+        $left: 2px;
+        $second-top: 25px;
+        $second-left: 3px;
+        $margin: -16px auto 8px auto;
+    } @if $direction == 'down' {
+        $top: -20px;
+        $left: 2px;
+        $second-top: -19px;
+        $second-left: 3px;
+        $margin: 10px auto 8px auto;
+    }
+    
+    cursor: auto;
+    &:before {
+        @if $direction == 'up' {
+            background: -webkit-linear-gradient(135deg, darken(#ffffff, 40) 0%, darken(#009245, 20) 50%, darken(#ffffff, 40) 100%);
+            background: -moz-linear-gradient(135deg, darken(#ffffff, 40) 0%, darken(#009245, 20) 50%, darken(#ffffff, 40) 100%);
+            background: -o-linear-gradient(135deg, darken(#ffffff, 40) 0%, darken(#009245, 20) 50%, darken(#ffffff, 40) 100%);
+            background: -ms-linear-gradient(135deg, darken(#ffffff, 40) 0%, darken(#009245, 20) 50%, darken(#ffffff, 40) 100%);
+            background: linear-gradient(135deg, darken(#ffffff, 40) 0%, darken(#009245, 20) 50%, darken(#ffffff, 40) 100%);
+        }
+        @if $direction == 'down' {
+            background: -webkit-linear-gradient(135deg, darken(#009245, 20) 0%, darken(#ffffff, 40) 50%, darken(#009245, 20) 100%);
+            background: -moz-linear-gradient(135deg, darken(#009245, 20) 0%, darken(#ffffff, 40) 50%, darken(#009245, 20) 100%);
+            background: -o-linear-gradient(135deg, darken(#009245, 20) 0%, darken(#ffffff, 40) 50%, darken(#009245, 20) 100%);
+            background: -ms-linear-gradient(135deg, darken(#009245, 20) 0%, darken(#ffffff, 40) 50%, darken(#009245, 20) 100%);
+            background: linear-gradient(135deg, darken(#009245, 20) 0%, darken(#ffffff, 40) 50%, darken(#009245, 20) 100%);
+        }
+    }
+    &:after {
+        background: darken(#8bc558, 30);
+    }
+    &:hover:after {
+        background: darken(#8bc558, 30);
+    }
+}
+
+
+@mixin button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    background: #8bc558;
+    padding: 12px 0;
+    border-radius: 3px;
+    margin: 0 auto 8px auto;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0,0,0, .4);
+    -webkit-touch-callout: none;
+    position: relative;
+    -webkit-transition: background 0.3s ease;
+    cursor: pointer;
+    &:before {
+        content: ' ';
+        background: -webkit-linear-gradient(top, #ffffff 0%,#009245 100%);
+        width: 100%;
+        height: 100%;
+        padding: 1px;
+        top: -1px;
+        left: -1px;
+        position: absolute;
+        z-index: -1;
+        border-radius: 3px;
+    }
+    &:focus, &:hover{
+        background: lighten(#8bc558, 10);
+    }
+}
+
+@mixin slider {
+    height: 8px;
+    margin: 24px 0;
+    border-radius: 4px;
+    -webkit-appearance: none !important;
+    width: 100%;
+    box-shadow: 0 0 16px rgba(255,255,255, 0.3);
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none !important;
+        background: #8bc558;
+        height:32px;
+        width:32px;
+        border-radius: 50%;
+        -webkit-transition: background 0.3s ease;
+        cursor: pointer;
+        &:focus, &:hover {
+            background: lighten(#8bc558, 10);
+        }
+        &:before {
+            content: ' ';
+            background: -webkit-linear-gradient(top, #ffffff 0%,#009245 100%);;
+            width: 100%;
+            height: 100%;
+            padding: 1px;
+            top: -1px;
+            left: -1px;
+            position: absolute;
+            z-index: -1;
+            border-radius: 50%;
+        }
+    }
+}
+
+@mixin field {
+    width: auto;
+    height: 44px;
+    padding: 8px;
+    resize: none;
+    background: #404040;
+    border-radius: 0;
+    border: 1px solid #696969;
+    color: white;
+    font: 11px "Andale Mono", monospace;
+}
+
+@mixin truncate-ellipsis { 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+

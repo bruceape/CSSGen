@@ -1,0 +1,37 @@
+$primary-bg: #333333;
+$secondary-bg: #1A1A1A;
+
+$preview-border: white;
+$preview-bg: #E6E6E6;
+$preview-container-bg: #666666;
+$preview-container-border: #CCCCCC;
+
+$primary-widget: white ;
+$primary-widget-hover: white;
+$primary-widget-gradient: white;
+$primary-widget-off: white;
+$primary-widget-text: white;
+
+$secondary-widget: #70994b;
+$secondary-widget-hover: white;
+$secondary-widget-gradient: white;
+$secondary-widget-off: white;
+$secondary-widget-text: white;
+
+$primary-widget-field-border: white;
+$primary-widget-field-text: white;
+$primary-widget-field-bg: white;
+
+$body-text: white;
+$heading: white;
+$label: white;
+$paragraph: white;
+// color: white;
+
+$goldilocks: 540px;
+$babybear: 720px;
+
+
+@media all and (min-width: $goldilocks) {
+	$heading: rgba(255,255,255, .6);
+}

@@ -1,0 +1,152 @@
+.field::-webkit-outer-spin-button,
+.field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.increment {
+	@include triangle('up');
+}
+
+.decrement {
+	@include triangle('down');
+}
+
+.disabled-increment {
+	@include disabled-triangle('up');
+}
+
+.disabled-decrement {
+	@include disabled-triangle('down');
+}
+
+.label, .name {
+	text-shadow: 0 0 24px white;
+	line-height: 1;
+}
+
+.snippet-header {
+	@include button;
+}
+
+.download-link {
+	&:before {
+		content: '\2b07';
+		display: inline-block;
+		width: 20px;
+	}
+}
+
+.external-link {
+	&:before {
+		content: '\25F3';
+		display: inline-block;
+		width: 20px;
+	}
+}
+
+.snippet-link {
+	@include no-select;
+	&:hover {
+		color: white;
+	}
+}
+
+//TODO possibly refactor in layout?
+.copy-field {
+	@include field;
+	width: 100%;
+	height: 120px;
+}
+
+.copy-text-field {
+	@include field;
+	margin: 0;
+	float: left;
+	width: 40%;
+	@media all and (min-width: $babybear) {
+		width: 60%;
+	}
+}
+
+.slider {
+	@include slider;
+	@media all and (min-width: $goldilocks) {
+		margin: 64px 0 0 0;
+	}
+}
+
+.copy-button {
+	@include button;
+	max-width: 320px;
+}
+
+.unit-switch {
+	@include switch('%', 'Px');
+	top: 12px;
+	margin: 0 auto;
+	@media all and (min-width: $goldilocks) {
+		margin: 44px 0;
+	}
+}
+
+.onoff-switch {
+	@include switch('Off', 'On');
+	top: 12px;
+	margin: 0 auto;
+	@media all and (min-width: $goldilocks) {
+		margin: 44px 0;
+	}
+}
+
+.field {
+	height: 40px;
+	width: 64px;
+	border-radius: 0;
+	border: 1px solid black;
+	margin: 8px auto;
+	text-align: center;
+	color: gray;
+}
+
+.disabled-field {
+	background: lightgray;
+}
+
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+
+pre {
+	@include field;
+	height: auto;
+	color: darken(white, 20);
+    code {
+    	font-size: 11px;
+    	padding: 0;
+    }
+}
+
+.copy-helper {
+	background: $secondary-bg;
+	padding: 8px;
+	position: absolute;
+	height: 38px;
+	display: none;
+	margin: -48px 0 0 0;
+	z-index: 9999;
+	@include no-select;
+	&:after {
+		content: ' ';
+		display: block;
+		width: 0px;
+		position: relative;
+		top: 7px;
+		border-left: 16px solid transparent;
+		border-right: 16px solid transparent;
+		border-top: 16px solid $secondary-bg;
+	}
+	@media all and (min-width: $goldilocks) {
+		width: 320px;
+	}
+}

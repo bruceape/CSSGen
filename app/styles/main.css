@@ -457,6 +457,15 @@ a, a:link, a:visited {
 a:active, a:focus, a:hover {
   color: gray; }
 
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@viewport {
+  width: device-width; }
+
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;

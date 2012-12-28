@@ -43,4 +43,9 @@ require(['pubsub', 'border-radius', 'text-shadow', 'columns', 'box-shadow', 'men
 		window.bs = boxShadow;
 		window.ts = textShadow;
 		window.ps = ps;
+
+		window.Modernizr.load({
+		  test: window.Modernizr.range,
+		  nope: 'scripts/vendor/html5slider.js'
+		});
 });

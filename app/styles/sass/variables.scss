@@ -6,21 +6,29 @@ $preview-bg: #E6E6E6;
 $preview-container-bg: #666666;
 $preview-container-border: #CCCCCC;
 
-$primary-widget: white ;
-$primary-widget-hover: white;
-$primary-widget-gradient: white;
-$primary-widget-off: white;
-$primary-widget-text: white;
+//Widgets
+$primary-widget-text-color: white;
+$primary-widget-text-shadow: 1px 1px 2px rgba(0,0,0, .4);;
+$primary-widget-bg: #8bc558;
+$primary-widget-bg-hover: lighten($primary-widget-bg, 10);
+$primary-widget-gradient: -webkit-linear-gradient(270deg, #ffffff 0%,#009245 100%);
+$primary-widget-bg-disabled: darken($primary-widget-bg, 30);
+$primary-widget-bg-hover-disabled: darken($primary-widget-bg, 30);
+$primary-widget-off-bg: white;
+$primary-widget-off-text-color: #999999;
+$primary-widget-off-border: 2px solid #999999;
+$primary-widget-field-bg: #404040;
+$primary-widget-field-text-color: white;
+$primary-widget-field-border: 1px solid #696969;
+$primary-widget-textfield-bg: white;
+$primary-widget-textfield-text-color: gray;
+$primary-widget-textfield-border: 1px solid black;
 
 $secondary-widget: #70994b;
 $secondary-widget-hover: white;
 $secondary-widget-gradient: white;
 $secondary-widget-off: white;
 $secondary-widget-text: white;
-
-$primary-widget-field-border: white;
-$primary-widget-field-text: white;
-$primary-widget-field-bg: white;
 
 $body-text: white;
 $heading: white;

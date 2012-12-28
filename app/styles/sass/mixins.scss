@@ -47,28 +47,35 @@
 }
 
 @mixin switch($on, $off) {
-	-webkit-touch-callout: none;
+    display: block;
     width: 136px;
     height: 38px;
     padding: 3px 0;
+
     position: relative;
-    display: block;
+
     -webkit-transition: background 0.3s ease;
+    -webkit-touch-callout: none;
+
     &:focus label i:after, &:hover label i:after{
-        background: lighten(#8bc558, 10);
+        background: $primary-widget-bg-hover;
     }
     input {
+        width: 136px;
+        height: 54px;
+
     	position: absolute;
-    	width: 136px;
-    	height: 54px;
-    	z-index: 100;
-    	opacity: 0;
         top: -6px;
+        z-index: 100;
+
+        opacity: 0;
     	cursor: pointer;
+
     	&:checked  ~ label i {
-    		left: auto;
-    		right: -2px;
+            right: -2px;
+            left: auto;
     	}
+        //Switch On and Off states when Checked
     	&:checked  ~ label i:before {
     		content: $on;
     		right: 130%;
@@ -78,53 +85,67 @@
     	}
     }
     label {
-    	display: block;
-    	width: 100%;
-    	height: 100%;
-    	position: relative;
-    	border-radius: 3px;
-    	background: #FFFFFF;
-    	border: 2px solid #999999;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: $primary-widget-off-border;
+        border-radius: 3px;
+        
+        position: relative;
+        
+        background: $primary-widget-off-bg;
     	i {
+            //The On state
     		display: block;
     		height: 38px;
     		width: 72px;
-    		position: absolute;
-    		top: -5px;
-    		left: -2px;
-    		z-index: 2;
+    		border-radius: 2px;
+
+            position: absolute;
+            top: -5px;
+            left: -2px;
+            z-index: 2;
+            
             background: -webkit-linear-gradient(270deg, #ffffff 0%,#009245 100%);
             background: -moz-linear-gradient(270deg, #ffffff 0%,#009245 100%);
             background: -o-linear-gradient(270deg, #ffffff 0%,#009245 100%);
             background: -ms-linear-gradient(270deg, #ffffff 0%,#009245 100%);
             background: linear-gradient(270deg, #ffffff 0%,#009245 100%);
-    		border-radius: 2px;
     		&:after {
+                //The On state content
     			content: $on;
-                color: white;
-    			position: absolute;
+
     			width: 70px;
-    			text-align: center;
-    			left: 1px;
-                top: 1px;
+                height: 22px;
                 padding: 8px 0 6px 0;
-                background: #8bc558;
                 border-radius: 2px;
-    			height: 22px;
+                
     			font-style: normal;
     			font-family: Helvetica, Arial, sans-serif;
     			font-size: 18px;
+                text-align: center;
+                color: white;
+                text-shadow: $primary-widget-text-shadow;
+                
+                position: absolute;
+                left: 1px;
+                top: 1px;
+
+                background: $primary-widget-bg;
     		}
     		&:before {
+                //The Off state content
     			content: $off;
-    			position: absolute;
-    			top: 60%;
-    			right: -55%;
+
+                position: absolute;
+                top: 60%;
+                right: -55%;
     			margin: -14px 0 0 0;
-    			color: #999999; /* Fallback */
-    			font-style: normal;
-    			font-family: Helvetica, Arial, sans-serif;
-    			font-size: 18px;
+    			
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                color: $primary-widget-off-text-color;
     		}
     	}
     }
@@ -150,26 +171,32 @@
         $second-left: 3px;
         $margin: 10px auto 6px auto;
     }
+    @include image-replace;
 
-    cursor: pointer;
+    display: block;
     width: 36px;
     height: 18px;
+    overflow: hidden;
+    
     position: relative;
-    display: block;
     margin: $margin;
-    @include image-replace;
     -webkit-transform: scale(1, 1.5);
     -moz-transform: scale(1, 1.5);
     -o-transform: scale(1, 1.5);
     -ms-transform: scale(1, 1.5);
     transform: scale(1, 1.5);
-    overflow: hidden;
+    
+    cursor: pointer;
     -webkit-touch-callout: none;
+    
     -webkit-transition: background 0.3s ease;
     &:before {
+        //Gradient Border
         content: ' ';
+
         width: 32px;
         height: 32px;
+
         @if $direction == 'up' {
             background: -webkit-linear-gradient(135deg, #ffffff 0%,#009245 50%, #ffffff 100%);
             background: -moz-linear-gradient(135deg, #ffffff 0%,#009245 50%, #ffffff 100%);
@@ -184,6 +211,7 @@
             background: -ms-linear-gradient(135deg, #009245 0%,#ffffff 50%, #009245 100%);
             background: linear-gradient(135deg, #009245 0%,#ffffff 50%, #009245 100%);
         }
+
         position: absolute;
         top: $top;
         left: $left;
@@ -194,10 +222,12 @@
         transform: rotate(45deg);
     }
     &:after {
+        //Inner Color
         content: ' ';
+
         width: 30px;
         height: 30px;
-        background: #8bc558;
+
         position: absolute;
         top: $second-top;
         left: $second-left;
@@ -206,6 +236,8 @@
         -o-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
+        
+        background: $primary-widget-bg;
         -webkit-transition: background 0.3s ease;
         -moz-transition: background 0.3s ease;
         -o-transition: background 0.3s ease;
@@ -213,7 +245,7 @@
         transition: background 0.3s ease;
     }
     &:hover:after {
-        background: lighten(#8bc558, 10);
+        background: $primary-widget-bg-hover;
     }
 }
 
@@ -256,10 +288,10 @@
         }
     }
     &:after {
-        background: darken(#8bc558, 30);
+        background: $primary-widget-bg-disabled;
     }
     &:hover:after {
-        background: darken(#8bc558, 30);
+        background: $primary-widget-bg-hover-disabled
     }
 }
 
@@ -267,84 +299,119 @@
 @mixin button {
     display: block;
     width: 100%;
-    text-align: center;
-    font-size: 18px;
-    color: white;
-    background: #8bc558;
     padding: 12px 0;
     border-radius: 3px;
-    margin: 0 auto 8px auto;
-    text-decoration: none;
-    text-shadow: 1px 1px 2px rgba(0,0,0, .4);
-    -webkit-touch-callout: none;
+    
     position: relative;
-    -webkit-transition: background 0.3s ease;
+    margin: 0 auto 8px auto;
+
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: $primary-widget-text-color;
+    text-shadow: $primary-widget-text-shadow;
+    
+    background-color: $primary-widget-bg;
+
     cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-transition: background 0.3s ease;
     &:before {
         content: ' ';
-        background: -webkit-linear-gradient(top, #ffffff 0%,#009245 100%);
+
         width: 100%;
         height: 100%;
         padding: 1px;
+        border-radius: 3px;
+
+        position: absolute;
         top: -1px;
         left: -1px;
-        position: absolute;
         z-index: -1;
-        border-radius: 3px;
+        
+        background: $primary-widget-gradient;
     }
     &:focus, &:hover{
-        background: lighten(#8bc558, 10);
+        background: $primary-widget-bg-hover;
     }
 }
 
 @mixin slider {
     height: 8px;
-    margin: 24px 0;
     border-radius: 4px;
-    -webkit-appearance: none !important;
+
     width: 100%;
+    margin: 24px 0;
+    
+    -webkit-appearance: none !important;
     box-shadow: 0 0 16px rgba(255,255,255, 0.3);
+
     &::-webkit-slider-thumb {
         -webkit-appearance: none !important;
-        background: #8bc558;
+        background: $primary-widget-bg;
+
+        border-radius: 50%;
+        
         height:32px;
         width:32px;
-        border-radius: 50%;
-        -webkit-transition: background 0.3s ease;
+
         cursor: pointer;
+        -webkit-transition: background 0.3s ease;
         &:focus, &:hover {
-            background: lighten(#8bc558, 10);
+            background: $primary-widget-bg-hover;
         }
         &:before {
             content: ' ';
-            background: -webkit-linear-gradient(top, #ffffff 0%,#009245 100%);;
+
             width: 100%;
             height: 100%;
             padding: 1px;
+            border-radius: 50%;
+
+            position: absolute;
             top: -1px;
             left: -1px;
-            position: absolute;
             z-index: -1;
-            border-radius: 50%;
+            
+            background: $primary-widget-gradient;
         }
     }
 }
 
 @mixin field {
+    padding: 8px;
+    // border: 1px solid #696969;
+    border: $primary-widget-field-border;
+    border-radius: 0;
+
     width: auto;
     height: 44px;
-    padding: 8px;
-    resize: none;
-    background: #404040;
-    border-radius: 0;
-    border: 1px solid #696969;
-    color: white;
+
     font: 11px "Andale Mono", monospace;
+    // color: white;
+    color: $primary-widget-field-text-color;
+
+    // background: #404040;
+    background: $primary-widget-field-bg;
+
+    resize: none;
+}
+
+@mixin textfield {
+    border-radius: 0;
+    border: $primary-widget-textfield-border;
+    
+    margin: 8px auto;
+
+    text-align: center;
+    color: $primary-widget-textfield-text-color;
+
+    background: $primary-widget-textfield-bg;
 }
 
 @mixin truncate-ellipsis { 
-    white-space: nowrap; 
     overflow: hidden; 
+    white-space: nowrap; 
     text-overflow: ellipsis; 
 }
 

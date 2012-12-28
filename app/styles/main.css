@@ -898,8 +898,8 @@ article {
   height: 44px;
   line-height: 44px;
   float: left;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis; }
   @media all and (min-width: 720px) {
     .snippet-link {
@@ -914,21 +914,21 @@ article {
   margin: 0; }
 
 .increment {
-  cursor: pointer;
-  width: 36px;
-  height: 18px;
-  position: relative;
-  display: block;
-  margin: 16px auto 8px auto;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
+  display: block;
+  width: 36px;
+  height: 18px;
+  overflow: hidden;
+  position: relative;
+  margin: 16px auto 8px auto;
   -webkit-transform: scale(1, 1.5);
   -moz-transform: scale(1, 1.5);
   -o-transform: scale(1, 1.5);
   -ms-transform: scale(1, 1.5);
   transform: scale(1, 1.5);
-  overflow: hidden;
+  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-transition: background 0.3s ease; }
   .increment:before {
@@ -952,7 +952,6 @@ article {
     content: ' ';
     width: 30px;
     height: 30px;
-    background: #8bc558;
     position: absolute;
     top: 9px;
     left: 3px;
@@ -961,6 +960,7 @@ article {
     -o-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+    background: #8bc558;
     -webkit-transition: background 0.3s ease;
     -moz-transition: background 0.3s ease;
     -o-transition: background 0.3s ease;
@@ -970,21 +970,21 @@ article {
     background: #a5d27e; }
 
 .decrement {
-  cursor: pointer;
-  width: 36px;
-  height: 18px;
-  position: relative;
-  display: block;
-  margin: 10px auto 6px auto;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
+  display: block;
+  width: 36px;
+  height: 18px;
+  overflow: hidden;
+  position: relative;
+  margin: 10px auto 6px auto;
   -webkit-transform: scale(1, 1.5);
   -moz-transform: scale(1, 1.5);
   -o-transform: scale(1, 1.5);
   -ms-transform: scale(1, 1.5);
   transform: scale(1, 1.5);
-  overflow: hidden;
+  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-transition: background 0.3s ease; }
   .decrement:before {
@@ -1008,7 +1008,6 @@ article {
     content: ' ';
     width: 30px;
     height: 30px;
-    background: #8bc558;
     position: absolute;
     top: -19px;
     left: 3px;
@@ -1017,6 +1016,7 @@ article {
     -o-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+    background: #8bc558;
     -webkit-transition: background 0.3s ease;
     -moz-transition: background 0.3s ease;
     -o-transition: background 0.3s ease;
@@ -1058,30 +1058,30 @@ article {
 .snippet-header {
   display: block;
   width: 100%;
-  text-align: center;
-  font-size: 18px;
-  color: white;
-  background: #8bc558;
   padding: 12px 0;
   border-radius: 3px;
-  margin: 0 auto 8px auto;
-  text-decoration: none;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-  -webkit-touch-callout: none;
   position: relative;
-  -webkit-transition: background 0.3s ease;
-  cursor: pointer; }
+  margin: 0 auto 8px auto;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  background-color: #8bc558;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-transition: background 0.3s ease; }
   .snippet-header:before {
     content: ' ';
-    background: -webkit-linear-gradient(top, white 0%, #009245 100%);
     width: 100%;
     height: 100%;
     padding: 1px;
+    border-radius: 3px;
+    position: absolute;
     top: -1px;
     left: -1px;
-    position: absolute;
     z-index: -1;
-    border-radius: 3px; }
+    background: -webkit-linear-gradient(270deg, white 0%, #009245 100%); }
   .snippet-header:focus, .snippet-header:hover {
     background: #a5d27e; }
 
@@ -1105,28 +1105,28 @@ article {
     color: white; }
 
 .copy-field {
+  padding: 8px;
+  border: 1px solid dimgrey;
+  border-radius: 0;
   width: auto;
   height: 44px;
-  padding: 8px;
-  resize: none;
-  background: #404040;
-  border-radius: 0;
-  border: 1px solid #696969;
-  color: white;
   font: 11px "Andale Mono", monospace;
+  color: white;
+  background: #404040;
+  resize: none;
   width: 100%;
   height: 120px; }
 
 .copy-text-field {
+  padding: 8px;
+  border: 1px solid dimgrey;
+  border-radius: 0;
   width: auto;
   height: 44px;
-  padding: 8px;
-  resize: none;
-  background: #404040;
-  border-radius: 0;
-  border: 1px solid #696969;
-  color: white;
   font: 11px "Andale Mono", monospace;
+  color: white;
+  background: #404040;
+  resize: none;
   margin: 0;
   float: left;
   width: 40%; }
@@ -1136,32 +1136,32 @@ article {
 
 .slider {
   height: 8px;
-  margin: 24px 0;
   border-radius: 4px;
-  -webkit-appearance: none !important;
   width: 100%;
+  margin: 24px 0;
+  -webkit-appearance: none !important;
   box-shadow: 0 0 16px rgba(255, 255, 255, 0.3); }
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none !important;
     background: #8bc558;
+    border-radius: 50%;
     height: 32px;
     width: 32px;
-    border-radius: 50%;
-    -webkit-transition: background 0.3s ease;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition: background 0.3s ease; }
     .slider::-webkit-slider-thumb:focus, .slider::-webkit-slider-thumb:hover {
       background: #a5d27e; }
     .slider::-webkit-slider-thumb:before {
       content: ' ';
-      background: -webkit-linear-gradient(top, white 0%, #009245 100%);
       width: 100%;
       height: 100%;
       padding: 1px;
+      border-radius: 50%;
+      position: absolute;
       top: -1px;
       left: -1px;
-      position: absolute;
       z-index: -1;
-      border-radius: 50%; }
+      background: -webkit-linear-gradient(270deg, white 0%, #009245 100%); }
   @media all and (min-width: 540px) {
     .slider {
       margin: 64px 0 0 0; } }
@@ -1169,57 +1169,57 @@ article {
 .copy-button {
   display: block;
   width: 100%;
-  text-align: center;
-  font-size: 18px;
-  color: white;
-  background: #8bc558;
   padding: 12px 0;
   border-radius: 3px;
-  margin: 0 auto 8px auto;
-  text-decoration: none;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-  -webkit-touch-callout: none;
   position: relative;
-  -webkit-transition: background 0.3s ease;
+  margin: 0 auto 8px auto;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  background-color: #8bc558;
   cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-transition: background 0.3s ease;
   max-width: 320px; }
   .copy-button:before {
     content: ' ';
-    background: -webkit-linear-gradient(top, white 0%, #009245 100%);
     width: 100%;
     height: 100%;
     padding: 1px;
+    border-radius: 3px;
+    position: absolute;
     top: -1px;
     left: -1px;
-    position: absolute;
     z-index: -1;
-    border-radius: 3px; }
+    background: -webkit-linear-gradient(270deg, white 0%, #009245 100%); }
   .copy-button:focus, .copy-button:hover {
     background: #a5d27e; }
 
 .unit-switch {
-  -webkit-touch-callout: none;
+  display: block;
   width: 136px;
   height: 38px;
   padding: 3px 0;
   position: relative;
-  display: block;
   -webkit-transition: background 0.3s ease;
+  -webkit-touch-callout: none;
   top: 12px;
   margin: 0 auto; }
   .unit-switch:focus label i:after, .unit-switch:hover label i:after {
     background: #a5d27e; }
   .unit-switch input {
-    position: absolute;
     width: 136px;
     height: 54px;
+    position: absolute;
+    top: -6px;
     z-index: 100;
     opacity: 0;
-    top: -6px;
     cursor: pointer; }
     .unit-switch input:checked ~ label i {
-      left: auto;
-      right: -2px; }
+      right: -2px;
+      left: auto; }
     .unit-switch input:checked ~ label i:before {
       content: "%";
       right: 130%; }
@@ -1229,14 +1229,15 @@ article {
     display: block;
     width: 100%;
     height: 100%;
-    position: relative;
+    border: 2px solid #999999;
     border-radius: 3px;
-    background: #FFFFFF;
-    border: 2px solid #999999; }
+    position: relative;
+    background: white; }
     .unit-switch label i {
       display: block;
       height: 38px;
       width: 72px;
+      border-radius: 2px;
       position: absolute;
       top: -5px;
       left: -2px;
@@ -1245,61 +1246,60 @@ article {
       background: -moz-linear-gradient(270deg, white 0%, #009245 100%);
       background: -o-linear-gradient(270deg, white 0%, #009245 100%);
       background: -ms-linear-gradient(270deg, white 0%, #009245 100%);
-      background: linear-gradient(270deg, white 0%, #009245 100%);
-      border-radius: 2px; }
+      background: linear-gradient(270deg, white 0%, #009245 100%); }
       .unit-switch label i:after {
         content: "%";
-        color: white;
-        position: absolute;
         width: 70px;
-        text-align: center;
-        left: 1px;
-        top: 1px;
-        padding: 8px 0 6px 0;
-        background: #8bc558;
-        border-radius: 2px;
         height: 22px;
+        padding: 8px 0 6px 0;
+        border-radius: 2px;
         font-style: normal;
         font-family: Helvetica, Arial, sans-serif;
-        font-size: 18px; }
+        font-size: 18px;
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        background: #8bc558; }
       .unit-switch label i:before {
         content: "Px";
         position: absolute;
         top: 60%;
         right: -55%;
         margin: -14px 0 0 0;
-        color: #999999;
-        /* Fallback */
-        font-style: normal;
         font-family: Helvetica, Arial, sans-serif;
-        font-size: 18px; }
+        font-size: 18px;
+        font-style: normal;
+        color: #999999; }
   @media all and (min-width: 540px) {
     .unit-switch {
       margin: 44px 0; } }
 
 .onoff-switch {
-  -webkit-touch-callout: none;
+  display: block;
   width: 136px;
   height: 38px;
   padding: 3px 0;
   position: relative;
-  display: block;
   -webkit-transition: background 0.3s ease;
+  -webkit-touch-callout: none;
   top: 12px;
   margin: 0 auto; }
   .onoff-switch:focus label i:after, .onoff-switch:hover label i:after {
     background: #a5d27e; }
   .onoff-switch input {
-    position: absolute;
     width: 136px;
     height: 54px;
+    position: absolute;
+    top: -6px;
     z-index: 100;
     opacity: 0;
-    top: -6px;
     cursor: pointer; }
     .onoff-switch input:checked ~ label i {
-      left: auto;
-      right: -2px; }
+      right: -2px;
+      left: auto; }
     .onoff-switch input:checked ~ label i:before {
       content: "Off";
       right: 130%; }
@@ -1309,14 +1309,15 @@ article {
     display: block;
     width: 100%;
     height: 100%;
-    position: relative;
+    border: 2px solid #999999;
     border-radius: 3px;
-    background: #FFFFFF;
-    border: 2px solid #999999; }
+    position: relative;
+    background: white; }
     .onoff-switch label i {
       display: block;
       height: 38px;
       width: 72px;
+      border-radius: 2px;
       position: absolute;
       top: -5px;
       left: -2px;
@@ -1325,46 +1326,46 @@ article {
       background: -moz-linear-gradient(270deg, white 0%, #009245 100%);
       background: -o-linear-gradient(270deg, white 0%, #009245 100%);
       background: -ms-linear-gradient(270deg, white 0%, #009245 100%);
-      background: linear-gradient(270deg, white 0%, #009245 100%);
-      border-radius: 2px; }
+      background: linear-gradient(270deg, white 0%, #009245 100%); }
       .onoff-switch label i:after {
         content: "Off";
-        color: white;
-        position: absolute;
         width: 70px;
-        text-align: center;
-        left: 1px;
-        top: 1px;
-        padding: 8px 0 6px 0;
-        background: #8bc558;
-        border-radius: 2px;
         height: 22px;
+        padding: 8px 0 6px 0;
+        border-radius: 2px;
         font-style: normal;
         font-family: Helvetica, Arial, sans-serif;
-        font-size: 18px; }
+        font-size: 18px;
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        background: #8bc558; }
       .onoff-switch label i:before {
         content: "On";
         position: absolute;
         top: 60%;
         right: -55%;
         margin: -14px 0 0 0;
-        color: #999999;
-        /* Fallback */
-        font-style: normal;
         font-family: Helvetica, Arial, sans-serif;
-        font-size: 18px; }
+        font-size: 18px;
+        font-style: normal;
+        color: #999999; }
   @media all and (min-width: 540px) {
     .onoff-switch {
       margin: 44px 0; } }
 
 .field {
-  height: 40px;
-  width: 64px;
   border-radius: 0;
   border: 1px solid black;
   margin: 8px auto;
   text-align: center;
-  color: gray; }
+  color: gray;
+  background: white;
+  height: 40px;
+  width: 64px; }
 
 .disabled-field {
   background: lightgray; }
@@ -1373,15 +1374,15 @@ code, pre {
   font-family: Monaco, Andale Mono, Courier New, monospace; }
 
 pre {
+  padding: 8px;
+  border: 1px solid dimgrey;
+  border-radius: 0;
   width: auto;
   height: 44px;
-  padding: 8px;
-  resize: none;
-  background: #404040;
-  border-radius: 0;
-  border: 1px solid #696969;
-  color: white;
   font: 11px "Andale Mono", monospace;
+  color: white;
+  background: #404040;
+  resize: none;
   height: auto;
   color: #cccccc; }
   pre code {

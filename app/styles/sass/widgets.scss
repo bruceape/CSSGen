@@ -100,13 +100,9 @@
 }
 
 .field {
+	@include textfield;
 	height: 40px;
 	width: 64px;
-	border-radius: 0;
-	border: 1px solid black;
-	margin: 8px auto;
-	text-align: center;
-	color: gray;
 }
 
 .disabled-field {

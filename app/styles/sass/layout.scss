@@ -44,6 +44,8 @@ body {
 	
 	background: $secondary-bg;
 	-webkit-transition: background 0.3s ease;
+	-moz-transition: background 0.3s ease;
+	transition: background 0.3s ease;
 	@media all and (min-width: $goldilocks) {
 		height: 128px;
 		width: 100%;
@@ -92,6 +94,8 @@ body {
 	
 	background: $secondary-bg;
 	-webkit-transition: background 0.3s ease;
+	-moz-transition: background 0.3s ease;
+	transition: background 0.3s ease;
 	&:hover, &:focus, &:active {
 		background: $secondary-bg-hover;
 	}

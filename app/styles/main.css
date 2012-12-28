@@ -478,8 +478,7 @@ a:active, a:focus, a:hover {
   -ms-transform: scale(1, 1.5);
   transform: scale(1, 1.5);
   cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-transition: background 0.3s ease; }
+  -webkit-touch-callout: none; }
   .increment:before {
     content: ' ';
     width: 32px;
@@ -512,8 +511,6 @@ a:active, a:focus, a:hover {
     background: #8bc558;
     -webkit-transition: background 0.3s ease;
     -moz-transition: background 0.3s ease;
-    -o-transition: background 0.3s ease;
-    -ms-transition: background 0.3s ease;
     transition: background 0.3s ease; }
   .increment:hover:after {
     background: #a5d27e; }
@@ -534,8 +531,7 @@ a:active, a:focus, a:hover {
   -ms-transform: scale(1, 1.5);
   transform: scale(1, 1.5);
   cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-transition: background 0.3s ease; }
+  -webkit-touch-callout: none; }
   .decrement:before {
     content: ' ';
     width: 32px;
@@ -568,8 +564,6 @@ a:active, a:focus, a:hover {
     background: #8bc558;
     -webkit-transition: background 0.3s ease;
     -moz-transition: background 0.3s ease;
-    -o-transition: background 0.3s ease;
-    -ms-transition: background 0.3s ease;
     transition: background 0.3s ease; }
   .decrement:hover:after {
     background: #a5d27e; }
@@ -619,7 +613,9 @@ a:active, a:focus, a:hover {
   background-color: #8bc558;
   cursor: pointer;
   -webkit-touch-callout: none;
-  -webkit-transition: background 0.3s ease; }
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  transition: background 0.3s ease; }
   .snippet-header:before {
     content: ' ';
     width: 100%;
@@ -630,7 +626,8 @@ a:active, a:focus, a:hover {
     top: -1px;
     left: -1px;
     z-index: -1;
-    background: -webkit-linear-gradient(270deg, white 0%, #009245 100%); }
+    background: -webkit-linear-gradient(270deg, white 0%, #009245 100%);
+    background: linear-gradient(180deg, white 0%, #009245 100%); }
   .snippet-header:focus, .snippet-header:hover {
     background: #a5d27e; }
 
@@ -690,7 +687,9 @@ a:active, a:focus, a:hover {
     height: 32px;
     width: 32px;
     cursor: pointer;
-    -webkit-transition: background 0.3s ease; }
+    -webkit-transition: background 0.3s ease;
+    -moz-transition: background 0.3s ease;
+    transition: background 0.3s ease; }
     .slider::-webkit-slider-thumb:focus, .slider::-webkit-slider-thumb:hover {
       background: #a5d27e; }
     .slider::-webkit-slider-thumb:before {
@@ -703,7 +702,8 @@ a:active, a:focus, a:hover {
       top: -1px;
       left: -1px;
       z-index: -1;
-      background: -webkit-linear-gradient(270deg, white 0%, #009245 100%); }
+      background: -webkit-linear-gradient(270deg, white 0%, #009245 100%);
+      background: linear-gradient(180deg, white 0%, #009245 100%); }
 
 .copy-button {
   display: block;
@@ -720,7 +720,9 @@ a:active, a:focus, a:hover {
   background-color: #8bc558;
   cursor: pointer;
   -webkit-touch-callout: none;
-  -webkit-transition: background 0.3s ease; }
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  transition: background 0.3s ease; }
   .copy-button:before {
     content: ' ';
     width: 100%;
@@ -731,7 +733,8 @@ a:active, a:focus, a:hover {
     top: -1px;
     left: -1px;
     z-index: -1;
-    background: -webkit-linear-gradient(270deg, white 0%, #009245 100%); }
+    background: -webkit-linear-gradient(270deg, white 0%, #009245 100%);
+    background: linear-gradient(180deg, white 0%, #009245 100%); }
   .copy-button:focus, .copy-button:hover {
     background: #a5d27e; }
 
@@ -741,7 +744,6 @@ a:active, a:focus, a:hover {
   height: 38px;
   padding: 3px 0;
   position: relative;
-  -webkit-transition: background 0.3s ease;
   -webkit-touch-callout: none; }
   .unit-switch:focus label i:after, .unit-switch:hover label i:after {
     background: #a5d27e; }
@@ -779,10 +781,7 @@ a:active, a:focus, a:hover {
       left: -2px;
       z-index: 2;
       background: -webkit-linear-gradient(270deg, white 0%, #009245 100%);
-      background: -moz-linear-gradient(270deg, white 0%, #009245 100%);
-      background: -o-linear-gradient(270deg, white 0%, #009245 100%);
-      background: -ms-linear-gradient(270deg, white 0%, #009245 100%);
-      background: linear-gradient(270deg, white 0%, #009245 100%); }
+      background: linear-gradient(180deg, white 0%, #009245 100%); }
       .unit-switch label i:after {
         content: "%";
         width: 70px;
@@ -798,7 +797,10 @@ a:active, a:focus, a:hover {
         position: absolute;
         left: 1px;
         top: 1px;
-        background: #8bc558; }
+        background: #8bc558;
+        -webkit-transition: background 0.3s ease;
+        -moz-transition: background 0.3s ease;
+        transition: background 0.3s ease; }
       .unit-switch label i:before {
         content: "Px";
         position: absolute;
@@ -816,7 +818,6 @@ a:active, a:focus, a:hover {
   height: 38px;
   padding: 3px 0;
   position: relative;
-  -webkit-transition: background 0.3s ease;
   -webkit-touch-callout: none; }
   .onoff-switch:focus label i:after, .onoff-switch:hover label i:after {
     background: #a5d27e; }
@@ -854,10 +855,7 @@ a:active, a:focus, a:hover {
       left: -2px;
       z-index: 2;
       background: -webkit-linear-gradient(270deg, white 0%, #009245 100%);
-      background: -moz-linear-gradient(270deg, white 0%, #009245 100%);
-      background: -o-linear-gradient(270deg, white 0%, #009245 100%);
-      background: -ms-linear-gradient(270deg, white 0%, #009245 100%);
-      background: linear-gradient(270deg, white 0%, #009245 100%); }
+      background: linear-gradient(180deg, white 0%, #009245 100%); }
       .onoff-switch label i:after {
         content: "Off";
         width: 70px;
@@ -873,7 +871,10 @@ a:active, a:focus, a:hover {
         position: absolute;
         left: 1px;
         top: 1px;
-        background: #8bc558; }
+        background: #8bc558;
+        -webkit-transition: background 0.3s ease;
+        -moz-transition: background 0.3s ease;
+        transition: background 0.3s ease; }
       .onoff-switch label i:before {
         content: "On";
         position: absolute;
@@ -994,7 +995,9 @@ body {
   text-align: center;
   text-transform: uppercase;
   background: #1a1a1a;
-  -webkit-transition: background 0.3s ease; }
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  transition: background 0.3s ease; }
   @media all and (min-width: 540px) {
     .menu-item {
       height: 128px;
@@ -1030,7 +1033,9 @@ body {
   text-decoration: none;
   color: white;
   background: #1a1a1a;
-  -webkit-transition: background 0.3s ease; }
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  transition: background 0.3s ease; }
   .menu-link:hover, .menu-link:focus, .menu-link:active {
     background: #272727; }
   @media all and (min-width: 540px) {

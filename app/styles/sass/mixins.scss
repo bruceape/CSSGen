@@ -128,7 +128,6 @@
 
                 background: $primary-widget-bg;
                 -webkit-transition: background 0.3s ease;
-                -moz-transition: background 0.3s ease;
                 transition: background 0.3s ease;
     		}
     		&:before {
@@ -179,8 +178,6 @@
     position: relative;
     margin: $margin;
     -webkit-transform: scale(1, 1.5);
-    -moz-transform: scale(1, 1.5);
-    -o-transform: scale(1, 1.5);
     -ms-transform: scale(1, 1.5);
     transform: scale(1, 1.5);
     
@@ -195,16 +192,10 @@
 
         @if $direction == 'up' {
             background: -webkit-linear-gradient(135deg, #ffffff 0%,#009245 50%, #ffffff 100%);
-            background: -moz-linear-gradient(135deg, #ffffff 0%,#009245 50%, #ffffff 100%);
-            background: -o-linear-gradient(135deg, #ffffff 0%,#009245 50%, #ffffff 100%);
-            background: -ms-linear-gradient(135deg, #ffffff 0%,#009245 50%, #ffffff 100%);
             background: linear-gradient(135deg, #ffffff 0%,#009245 50%, #ffffff 100%);
         }
         @if $direction == 'down' {
             background: -webkit-linear-gradient(135deg, #009245 0%,#ffffff 50%, #009245 100%);
-            background: -moz-linear-gradient(135deg, #009245 0%,#ffffff 50%, #009245 100%);
-            background: -o-linear-gradient(135deg, #009245 0%,#ffffff 50%, #009245 100%);
-            background: -ms-linear-gradient(135deg, #009245 0%,#ffffff 50%, #009245 100%);
             background: linear-gradient(135deg, #009245 0%,#ffffff 50%, #009245 100%);
         }
 
@@ -212,8 +203,6 @@
         top: $top;
         left: $left;
         -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
     }
@@ -228,14 +217,11 @@
         top: $second-top;
         left: $second-left;
         -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
         
         background: $primary-widget-bg;
         -webkit-transition: background 0.3s ease;
-        -moz-transition: background 0.3s ease;
         transition: background 0.3s ease;
     }
     &:hover:after {
@@ -268,16 +254,10 @@
     &:before {
         @if $direction == 'up' {
             background: -webkit-linear-gradient(135deg, darken(#ffffff, 40) 0%, darken(#009245, 20) 50%, darken(#ffffff, 40) 100%);
-            background: -moz-linear-gradient(135deg, darken(#ffffff, 40) 0%, darken(#009245, 20) 50%, darken(#ffffff, 40) 100%);
-            background: -o-linear-gradient(135deg, darken(#ffffff, 40) 0%, darken(#009245, 20) 50%, darken(#ffffff, 40) 100%);
-            background: -ms-linear-gradient(135deg, darken(#ffffff, 40) 0%, darken(#009245, 20) 50%, darken(#ffffff, 40) 100%);
             background: linear-gradient(135deg, darken(#ffffff, 40) 0%, darken(#009245, 20) 50%, darken(#ffffff, 40) 100%);
         }
         @if $direction == 'down' {
             background: -webkit-linear-gradient(135deg, darken(#009245, 20) 0%, darken(#ffffff, 40) 50%, darken(#009245, 20) 100%);
-            background: -moz-linear-gradient(135deg, darken(#009245, 20) 0%, darken(#ffffff, 40) 50%, darken(#009245, 20) 100%);
-            background: -o-linear-gradient(135deg, darken(#009245, 20) 0%, darken(#ffffff, 40) 50%, darken(#009245, 20) 100%);
-            background: -ms-linear-gradient(135deg, darken(#009245, 20) 0%, darken(#ffffff, 40) 50%, darken(#009245, 20) 100%);
             background: linear-gradient(135deg, darken(#009245, 20) 0%, darken(#ffffff, 40) 50%, darken(#009245, 20) 100%);
         }
     }
@@ -310,7 +290,6 @@
     cursor: pointer;
     -webkit-touch-callout: none;
     -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
     transition: background 0.3s ease;
     &:before {
         content: ' ';
@@ -352,7 +331,6 @@
 
         cursor: pointer;
         -webkit-transition: background 0.3s ease;
-        -moz-transition: background 0.3s ease;
         transition: background 0.3s ease;
         &:focus, &:hover {
             background: $primary-widget-bg-hover;

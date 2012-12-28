@@ -473,8 +473,6 @@ a:active, a:focus, a:hover {
   position: relative;
   margin: 16px auto 8px auto;
   -webkit-transform: scale(1, 1.5);
-  -moz-transform: scale(1, 1.5);
-  -o-transform: scale(1, 1.5);
   -ms-transform: scale(1, 1.5);
   transform: scale(1, 1.5);
   cursor: pointer;
@@ -484,16 +482,11 @@ a:active, a:focus, a:hover {
     width: 32px;
     height: 32px;
     background: -webkit-linear-gradient(135deg, white 0%, #009245 50%, white 100%);
-    background: -moz-linear-gradient(135deg, white 0%, #009245 50%, white 100%);
-    background: -o-linear-gradient(135deg, white 0%, #009245 50%, white 100%);
-    background: -ms-linear-gradient(135deg, white 0%, #009245 50%, white 100%);
     background: linear-gradient(135deg, white 0%, #009245 50%, white 100%);
     position: absolute;
     top: 8px;
     left: 2px;
     -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
   .increment:after {
@@ -504,13 +497,10 @@ a:active, a:focus, a:hover {
     top: 9px;
     left: 3px;
     -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     background: #8bc558;
     -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
     transition: background 0.3s ease; }
   .increment:hover:after {
     background: #a5d27e; }
@@ -526,8 +516,6 @@ a:active, a:focus, a:hover {
   position: relative;
   margin: 10px auto 6px auto;
   -webkit-transform: scale(1, 1.5);
-  -moz-transform: scale(1, 1.5);
-  -o-transform: scale(1, 1.5);
   -ms-transform: scale(1, 1.5);
   transform: scale(1, 1.5);
   cursor: pointer;
@@ -537,16 +525,11 @@ a:active, a:focus, a:hover {
     width: 32px;
     height: 32px;
     background: -webkit-linear-gradient(135deg, #009245 0%, white 50%, #009245 100%);
-    background: -moz-linear-gradient(135deg, #009245 0%, white 50%, #009245 100%);
-    background: -o-linear-gradient(135deg, #009245 0%, white 50%, #009245 100%);
-    background: -ms-linear-gradient(135deg, #009245 0%, white 50%, #009245 100%);
     background: linear-gradient(135deg, #009245 0%, white 50%, #009245 100%);
     position: absolute;
     top: -20px;
     left: 2px;
     -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
   .decrement:after {
@@ -557,13 +540,10 @@ a:active, a:focus, a:hover {
     top: -19px;
     left: 3px;
     -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     background: #8bc558;
     -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
     transition: background 0.3s ease; }
   .decrement:hover:after {
     background: #a5d27e; }
@@ -572,9 +552,6 @@ a:active, a:focus, a:hover {
   cursor: auto; }
   .disabled-increment:before {
     background: -webkit-linear-gradient(135deg, #999999 0%, #002c15 50%, #999999 100%);
-    background: -moz-linear-gradient(135deg, #999999 0%, #002c15 50%, #999999 100%);
-    background: -o-linear-gradient(135deg, #999999 0%, #002c15 50%, #999999 100%);
-    background: -ms-linear-gradient(135deg, #999999 0%, #002c15 50%, #999999 100%);
     background: linear-gradient(135deg, #999999 0%, #002c15 50%, #999999 100%); }
   .disabled-increment:after {
     background: #406222; }
@@ -585,9 +562,6 @@ a:active, a:focus, a:hover {
   cursor: auto; }
   .disabled-decrement:before {
     background: -webkit-linear-gradient(135deg, #002c15 0%, #999999 50%, #002c15 100%);
-    background: -moz-linear-gradient(135deg, #002c15 0%, #999999 50%, #002c15 100%);
-    background: -o-linear-gradient(135deg, #002c15 0%, #999999 50%, #002c15 100%);
-    background: -ms-linear-gradient(135deg, #002c15 0%, #999999 50%, #002c15 100%);
     background: linear-gradient(135deg, #002c15 0%, #999999 50%, #002c15 100%); }
   .disabled-decrement:after {
     background: #406222; }
@@ -614,7 +588,6 @@ a:active, a:focus, a:hover {
   cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-transition: background 0.3s ease;
-  -moz-transition: background 0.3s ease;
   transition: background 0.3s ease; }
   .snippet-header:before {
     content: ' ';
@@ -688,7 +661,6 @@ a:active, a:focus, a:hover {
     width: 32px;
     cursor: pointer;
     -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
     transition: background 0.3s ease; }
     .slider::-webkit-slider-thumb:focus, .slider::-webkit-slider-thumb:hover {
       background: #a5d27e; }
@@ -721,7 +693,6 @@ a:active, a:focus, a:hover {
   cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-transition: background 0.3s ease;
-  -moz-transition: background 0.3s ease;
   transition: background 0.3s ease; }
   .copy-button:before {
     content: ' ';
@@ -799,7 +770,6 @@ a:active, a:focus, a:hover {
         top: 1px;
         background: #8bc558;
         -webkit-transition: background 0.3s ease;
-        -moz-transition: background 0.3s ease;
         transition: background 0.3s ease; }
       .unit-switch label i:before {
         content: "Px";
@@ -873,7 +843,6 @@ a:active, a:focus, a:hover {
         top: 1px;
         background: #8bc558;
         -webkit-transition: background 0.3s ease;
-        -moz-transition: background 0.3s ease;
         transition: background 0.3s ease; }
       .onoff-switch label i:before {
         content: "On";
@@ -996,7 +965,6 @@ body {
   text-transform: uppercase;
   background: #1a1a1a;
   -webkit-transition: background 0.3s ease;
-  -moz-transition: background 0.3s ease;
   transition: background 0.3s ease; }
   @media all and (min-width: 540px) {
     .menu-item {
@@ -1034,7 +1002,6 @@ body {
   color: white;
   background: #1a1a1a;
   -webkit-transition: background 0.3s ease;
-  -moz-transition: background 0.3s ease;
   transition: background 0.3s ease; }
   .menu-link:hover, .menu-link:focus, .menu-link:active {
     background: #272727; }

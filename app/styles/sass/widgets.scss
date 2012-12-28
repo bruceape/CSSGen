@@ -101,3 +101,7 @@ pre {
 .copy-helper {
 	@include copy-helper;
 }
+
+.snippet-link {
+	@include snippet-title;
+}

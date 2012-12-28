@@ -9,11 +9,13 @@ body {
 }
 
 .menu {
-	margin: 0;
 	padding: 0;
-	background: $primary-bg;
 	overflow: hidden;
+	
 	height: 0;
+	margin: 0;
+	
+	background: $primary-bg;
 	@media all and (min-width: $goldilocks) {
 		height: auto;
 	}
@@ -27,30 +29,35 @@ body {
 }
 
 .menu-item {
-	width: 50%;
-	height: 48px;
-	float: left;
-	text-align: center;
 	padding: 16px 0 0 0;
-	font-size: 14px;
-	text-transform: uppercase;
-	background: $secondary-bg;
 	border-bottom: 1px solid lighten($secondary-bg, 10);
 	border-right: 1px solid lighten($secondary-bg, 3);
 	box-shadow: 0 16px 16px -16px rgba(0,0,0, .4); 
+
+	float: left;
+	width: 50%;
+	height: 48px;
+	
+	font-size: 14px;
+	text-align: center;
+	text-transform: uppercase;
+	
+	background: $secondary-bg;
 	-webkit-transition: background 0.3s ease;
 	@media all and (min-width: $goldilocks) {
+		height: 128px;
+		width: 100%;
+		padding: 96px 0 0 0;
+		border-bottom: 1px solid lighten($primary-bg, 10);
+		border-left: 1px solid lighten($primary-bg, 10);
 		box-shadow: inset 0 1px 0 rgba(0,0,0, 1),
 					inset 0 17px 24px -16px rgba(0,0,0, .6),
 					0 4px 8px -2px rgba(0,0,0, .4); 
-		background: $primary-bg;
-		width: 100%;
-		height: 128px;
-		padding: 96px 0 0 0;
+					
 		font-size: 12px;
 		letter-spacing: .15em;
-		border-bottom: 1px solid lighten($primary-bg, 10);
-		border-left: 1px solid lighten($primary-bg, 10);
+
+		background: $primary-bg;
 	}
 	&:visited, &:link {
 		color: white;
@@ -62,12 +69,13 @@ body {
 }
 
 .active-menu-item {
-	background: $secondary-widget;
-	border-bottom: 1px solid lighten($secondary-widget, 10);
+	border-bottom: 1px solid lighten($secondary-active, 10);
+	border-left: 1px solid lighten($secondary-active, 10);
 	border-top: none;
-	border-left: 1px solid lighten($secondary-widget, 10);
+
+	background: $secondary-active;
 	&:hover, &:active, &:focus {
-		background: lighten($secondary-widget, 10);
+		background: $secondary-active-hover;
 	}	
 }
 
@@ -75,55 +83,65 @@ body {
 	display: inline-block;
 	width: 100%;
 	height: 48px;
-	text-align: right;
 	padding:  0px 16px 0 0;
-	color: white;
-	text-decoration: none;
+	
 	font-size: 32px;
+	text-align: right;
+	text-decoration: none;
+	color: white;
+	
 	background: $secondary-bg;
 	-webkit-transition: background 0.3s ease;
 	&:hover, &:focus, &:active {
-		background: lighten($secondary-bg, 5);
+		background: $secondary-bg-hover;
 	}
-	// border-top: 1px solid lighten($secondary-bg, 10);
 	@media all and (min-width: $goldilocks) {
 		display: none;
 	}
 }
 
 nav {
-	background: $secondary-bg;
+	@include clearfix;
+
 	border-top: 1px solid lighten($secondary-bg, 10);
 	border-bottom: 1px solid lighten($secondary-bg, 25);
-	z-index: 9999;
 	box-shadow: 0 1px black,
 				0 0px 16px rgba(0,0,0, .8);
-	@include clearfix;
+
+	z-index: 9999;
+	
+	background: $secondary-bg;
 	@media all and (min-width: $goldilocks) {
-		position: absolute;
-		left: 0;
-		top: 0;
 		width: 128px;
 		box-shadow: 0 0 32px rgba(0,0,0, .4);
 		border: 0;
+		
+		position: absolute;
+		left: 0;
+		top: 0;
+
 		background: $primary-bg;
 	}
 }
 
 .main-header {
-	text-align: center;
 	border-bottom: 1px solid lighten($secondary-bg, 20);
 	border-top: 1px solid darken($secondary-bg, 0);
 	box-shadow: 0 4px 5px -5px rgba(0,0,0, 1); 
+	
 	position: relative;
+
+	text-align: center;
 	@media all and (min-width: $goldilocks) {
 		height: 128px;
-		text-align: left;
-		margin-left: 128px;
 		padding: 16px 0 0 64px;
 		border-bottom: 1px solid lighten($primary-bg, 10);
 		border-top: 1px solid darken($primary-bg, 0);
 		box-shadow: 0 4px 5px -5px rgba(0,0,0, 1); 
+
+		margin-left: 128px;
+		
+		text-align: left;
 	}
 }
 
@@ -133,49 +151,53 @@ article {
 
 .wrapper {
 	@include no-select;
+	
 	min-width: 320px;
-	// width: 320px;
-	margin: 0 auto;
 	overflow: hidden;
+	
+	margin: 0 auto;
 	@media all and (min-width: $goldilocks) {
 		width: auto;
-		margin-left: 128px;
 		max-width: 648px;
+	
+		margin-left: 128px;
 	}
 }
 
 .widget {
-	// border: 1px dotted white;
 	min-height: 88px;
 	max-width: 320px;
-	margin: 0 auto;
+
 	position: relative;
+	margin: 0 auto;
 	
 }
 
 .label {
-	// border: 1px dotted black;
-	position: absolute;
 	height: 100%;
 	width: 88px;
+	padding: 36px 0 0 8px;
+	
+	position: absolute;
 	top: 0;
 	left: 0;
 	margin: 0;
-	padding: 36px 0 0 8px;
 	@media all and (min-width: $goldilocks) {
 		width: 100%;
-		position: relative;
 		padding: 32px 0;
+
+		position: relative;
+
 		text-align: center;
 	}
 }
 
 .controls {
-	// border: 1px dotted cyan;
-	position: relative;
-	padding: 16px;
-	min-height: 88px;
 	@include clearfix;
+	min-height: 88px;
+	padding: 16px;
+	
+	position: relative;
 	@media all and (min-width: $goldilocks) {
 		width: 100%;
 		padding: 0 16px;
@@ -190,55 +212,56 @@ article {
 }
 
 .counter {
-	// border: 1px dotted beige;
-	text-align: center;
-	// padding: 16px 8px 16px 0;
+	@include clearfix;
 	width: 50%;
+
 	float: left;
-	// max-width: 160px;
+
+	text-align: center;
 	&:last-child {
-		// padding: 16px 0;
 		.name {
 			padding: 54px 8px 48px 8px;
 		}
 	}
-	@include clearfix;
 }
 
 .name {
-	// border: 1px dashed blue;
-	float: left;
-	padding: 54px 8px 48px 0;
-	margin: 0;
 	width: 25%;
+	padding: 54px 8px 48px 0;
+	
+	float: left;
+	margin: 0;
+
 	text-align: right;
 
 }
 
 .counter-container {
-	// border: 1px dashed orange;
-	float: right;
 	width: 75%;
 
+	float: right;
 }
 
 .border-radius-preview {
 	height: 300px;
-	position: relative;
 	max-width: 540px;
+
+	position: relative;
 	margin: 0 auto;
 	.preview {
-		border: 1px solid $preview-border;
 		height: 96px;
+		border: 1px solid $preview-border;
+		box-shadow: 0 0 16px rgba(0,0,0, .4);
+		
 		position: relative;
 		top: 100px;
 		margin: 0 96px;
+		
 		background: $preview-bg;
-		box-shadow: 0 0 16px rgba(0,0,0, .4);
 	}
 	.counter {
-		padding: 0;
 		width: auto;
+		padding: 0;
 		&:last-child {
 			padding: 0;
 		}
@@ -270,12 +293,14 @@ article {
 
 .preview-container {
     height: 180px;
-    position: relative;
-    background: $preview-container-bg;
-    border: 1px solid $preview-container-border;
     border-radius: 4px;
-    margin: 16px;
+    border: 1px solid $preview-container-border;
     overflow: hidden;
+    
+    position: relative;
+    margin: 16px;
+
+    background: $preview-container-bg;
     @media all and (min-width: $goldilocks) {
     	margin: 16px 48px;
     }
@@ -284,13 +309,15 @@ article {
 .box-shadow-preview {
 	@extend .preview-container;
 	.preview {
-		border: 1px solid $preview-border;
 		height: 96px;
+		border: 1px solid $preview-border;
+		box-shadow: 0 0 16px rgba(0,0,0, .4);
+
 		position: relative;
 		top: 40px;
 		margin: 0 96px;
+		
 		background: $preview-bg;
-		box-shadow: 0 0 16px rgba(0,0,0, .4);
 	}
 }
 
@@ -298,13 +325,15 @@ article {
 	@extend .preview-container;
 	.preview {
 		height: 96px;
+		
 		position: relative;
 		top: 48px;
 		margin: 0 auto;
-		text-transform: uppercase;
-		text-align: center;
+
 		font-size: 28px;
 		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
 	}
 }
 
@@ -314,6 +343,7 @@ article {
 	.preview {
 		position: relative;
 		margin: 0 auto;
+
 		font-size: 10px;
 		line-height: 1.5;
 		font-weight: bold;
@@ -334,15 +364,18 @@ article {
 		margin: 0 auto 64px auto;
 		&:before {
 			content: ' ';
+
 			display: block;
 			width: 100%;
 			height: 32px;
-			position: absolute;
-			top: 172px;
-			left: 0;
 			border-bottom: 1px solid lighten($primary-bg, 10);
 			border-top: 1px solid darken($primary-bg, 0);
 			box-shadow: 0 4px 5px -5px rgba(0,0,0, 1); 
+
+			position: absolute;
+			top: 172px;
+			left: 0;
+			
 		}
 	}
 }
@@ -360,14 +393,16 @@ article {
 	}
 	@media all and (min-width: $goldilocks) {
 		max-width: 360px;
+
 		margin: 0 auto;
 		.control-panel {
 			margin: 0 auto;
 		}
 		.widget {
 			width: 50%;
-			float: left;
 			border-right: 1px solid lighten($primary-bg, 10);
+			
+			float: left;
 			&:last-child {
 				border: 0;
 			}
@@ -378,6 +413,7 @@ article {
 
 .box-shadow-controls {
 	max-width: 590px;
+
 	margin: 0 auto;
 	@media all and (max-width: $goldilocks) {
 		.widget {
@@ -394,9 +430,10 @@ article {
 	}
 	@media all and (min-width: $goldilocks) {
 		.widget {
+			border-right: 1px solid lighten($primary-bg, 10);
+
 			float: left;
 			width: 50%;
-			border-right: 1px solid lighten($primary-bg, 10);
 			&:last-child {
 				border: 0;
 			}
@@ -454,11 +491,13 @@ article {
 	}
 	@media all and (min-width: $goldilocks) {
 		max-width: 500px;
+
 		margin: 0 auto;
 		.widget {
 			width: 50%;
-			float: left;
 			border-right: 1px solid lighten($primary-bg, 10);
+
+			float: left;
 			&:last-child {
 				border: 0;
 			}
@@ -479,60 +518,46 @@ article {
 	}
 	@media all and (min-width: $goldilocks) {
 		max-width: 500px;
+
 		margin: 0 auto;
 		.widget {
 			width: 50%;
-			float: left;
 			border-right: 1px solid lighten($primary-bg, 10);
+
+			float: left;
 			&:last-child {
 				border: 0;
 			}
 		}
 		.counter-container {
 			width: auto;
+
 			float: none;
 
 		}
 		.counter {
-			float: none;
 			width: auto;
+
+			float: none;
 			margin: 0 auto;
 		}
 	}
 }
 
 .snippet-list {
-	margin: 0;
 	padding: 0;
+
+	margin: 0;
 	li { 
-		list-style: none; 
-		padding: 8px 0;
 		@include clearfix;
+
+		padding: 8px 0;
+
+		list-style: none; 
 		&:last-child {
 			margin: 0 0 44px 0;
 		}
 	}
-}
-
-.snippet-link {
-	color: white;
-	display: inline-block;
-	text-decoration: none;
-	font-size: 18px;
-	padding: 0 4px;
-	overflow: hidden;
-	width: 60%;
-	height: 44px;
-	line-height: 44px;
-	float: left;
-	@include truncate-ellipsis;
-	@media all and (min-width: $babybear) {
-		width: 40%;
-	}
-}
-
-.js .snippet-list {
-	display: none;
 }
 
 //WIDGETS
@@ -585,9 +610,20 @@ pre {
 }
 
 .copy-helper {
-	@include copy-helper;
 	display: none;
 	@media all and (min-width: $goldilocks) {
 	    width: 320px;
+	}
+}
+
+.js .snippet-list {
+	display: none;
+}
+
+.snippet-link {
+	width: 60%;
+	float: left;
+	@media all and (min-width: $babybear) {
+	    width: 40%;
 	}
 }

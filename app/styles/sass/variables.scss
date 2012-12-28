@@ -1,16 +1,25 @@
+//Main Colors
 $primary-bg: #333333;
 $secondary-bg: #1A1A1A;
+$secondary-bg-hover: lighten($secondary-bg, 5);
+$secondary-active: #70994b;
+$secondary-active-hover: lighten($secondary-active, 10);
 
+$body-text-color: white;
+
+//Preview Box
 $preview-border: white;
 $preview-bg: #E6E6E6;
 $preview-container-bg: #666666;
 $preview-container-border: #CCCCCC;
 
 //Widgets
-$primary-widget-text-color: white;
-$primary-widget-text-shadow: 1px 1px 2px rgba(0,0,0, .4);;
 $primary-widget-bg: #8bc558;
 $primary-widget-bg-hover: lighten($primary-widget-bg, 10);
+$primary-widget-font: Helvetica, Arial, sans-serif;
+$primary-widget-font-size: 18px;
+$primary-widget-text-color: white;
+$primary-widget-text-shadow: 1px 1px 2px rgba(0,0,0, .4);;
 $primary-widget-gradient: -webkit-linear-gradient(270deg, #ffffff 0%,#009245 100%);
 $primary-widget-bg-disabled: darken($primary-widget-bg, 30);
 $primary-widget-bg-hover-disabled: darken($primary-widget-bg, 30);
@@ -18,6 +27,7 @@ $primary-widget-off-bg: white;
 $primary-widget-off-text-color: #999999;
 $primary-widget-off-border: 2px solid #999999;
 $primary-widget-field-bg: #404040;
+$primary-widget-field-font: 11px "Andale Mono", monospace;
 $primary-widget-field-text-color: white;
 $primary-widget-field-border: 1px solid #696969;
 $primary-widget-textfield-bg: white;
@@ -26,22 +36,11 @@ $primary-widget-textfield-border: 1px solid black;
 
 $label-shadow: 0 0 24px white;
 
-$secondary-widget: #70994b;
-$secondary-widget-hover: white;
-$secondary-widget-gradient: white;
-$secondary-widget-off: white;
-$secondary-widget-text: white;
-
-$body-text: white;
-$heading: white;
-$label: white;
-$paragraph: white;
-// color: white;
+$heading-shadow-color: white;
 
 $goldilocks: 540px;
 $babybear: 720px;
 
-
 @media all and (min-width: $goldilocks) {
-	$heading: rgba(255,255,255, .6);
+	$heading-shadow-color: rgba(255,255,255, .6);
 }

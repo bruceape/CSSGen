@@ -120,11 +120,11 @@
                 padding: 8px 0 6px 0;
                 border-radius: 2px;
                 
-    			font-style: normal;
-    			font-family: Helvetica, Arial, sans-serif;
-    			font-size: 18px;
+                font-family: $primary-widget-font;
+                font-size: $primary-widget-font-size;
+                color: $primary-widget-text-color;
+                font-style: normal;
                 text-align: center;
-                color: white;
                 text-shadow: $primary-widget-text-shadow;
                 
                 position: absolute;
@@ -142,10 +142,10 @@
                 right: -55%;
     			margin: -14px 0 0 0;
     			
-                font-family: Helvetica, Arial, sans-serif;
-                font-size: 18px;
-                font-style: normal;
+                font-family: $primary-widget-font;
+                font-size: $primary-widget-font-size;
                 color: $primary-widget-off-text-color;
+                font-style: normal;
     		}
     	}
     }
@@ -305,7 +305,7 @@
     position: relative;
     margin: 0 auto 8px auto;
 
-    font-size: 18px;
+    font-size: $primary-widget-font-size;
     text-align: center;
     text-decoration: none;
     color: $primary-widget-text-color;
@@ -337,15 +337,13 @@
 }
 
 @mixin slider {
+    -webkit-appearance: none !important;
     height: 8px;
     border-radius: 4px;
+    box-shadow: 0 0 16px rgba(255,255,255, 0.3);
 
     width: 100%;
     margin: 24px 0;
-    
-    -webkit-appearance: none !important;
-    box-shadow: 0 0 16px rgba(255,255,255, 0.3);
-
     &::-webkit-slider-thumb {
         -webkit-appearance: none !important;
         background: $primary-widget-bg;
@@ -380,18 +378,15 @@
 
 @mixin field {
     padding: 8px;
-    // border: 1px solid #696969;
     border: $primary-widget-field-border;
     border-radius: 0;
 
     width: 100%;
     height: 44px;
 
-    font: 11px "Andale Mono", monospace;
-    // color: white;
+    font: $primary-widget-field-font;
     color: $primary-widget-field-text-color;
 
-    // background: #404040;
     background: $primary-widget-field-bg;
 
     resize: none;
@@ -434,10 +429,24 @@
     }
 }
 
-
 @mixin truncate-ellipsis { 
     overflow: hidden; 
     white-space: nowrap; 
     text-overflow: ellipsis; 
+}
+
+@mixin snippet-title {
+    @include truncate-ellipsis;
+    
+    display: inline-block;
+    width: 100%;
+    height: 44px;
+    padding: 0 4px;
+    overflow: hidden;
+    
+    font-size: $primary-widget-font-size;
+    line-height: 44px;
+    color: $primary-widget-field-text-color;
+    text-decoration: none;
 }
 

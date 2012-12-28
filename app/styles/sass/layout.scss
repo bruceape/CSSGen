@@ -535,3 +535,59 @@ article {
 	display: none;
 }
 
+//WIDGETS
+.copy-field {
+	height: 120px;
+}
+
+.copy-text-field {
+	margin: 0;
+	float: left;
+	width: 40%;
+	@media all and (min-width: $babybear) {
+		width: 60%;
+	}
+}
+
+.slider {
+	@media all and (min-width: $goldilocks) {
+		margin: 64px 0 0 0;
+	}
+}
+
+.copy-button {
+	max-width: 320px;
+}
+
+.unit-switch {
+	top: 12px;
+	margin: 0 auto;
+	@media all and (min-width: $goldilocks) {
+		margin: 44px 0;
+	}
+}
+
+.onoff-switch {
+	top: 12px;
+	margin: 0 auto;
+	@media all and (min-width: $goldilocks) {
+		margin: 44px 0;
+	}
+}
+
+.field {
+	height: 40px;
+	width: 64px;
+}
+
+pre {
+	height: auto;
+}
+
+.copy-helper {
+	@include copy-helper;
+	display: none;
+	@media all and (min-width: $goldilocks) {
+	    width: 320px;
+	}
+}

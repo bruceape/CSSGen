@@ -384,7 +384,7 @@
     border: $primary-widget-field-border;
     border-radius: 0;
 
-    width: auto;
+    width: 100%;
     height: 44px;
 
     font: 11px "Andale Mono", monospace;
@@ -408,6 +408,32 @@
 
     background: $primary-widget-textfield-bg;
 }
+
+@mixin copy-helper {
+    padding: 8px;
+    height: 38px;
+    
+    position: absolute;
+    margin: -48px 0 0 0;
+    z-index: 9999;
+
+    background: $secondary-bg;
+    @include no-select;
+    &:after {
+        //Arrow down
+        content: ' ';
+
+        display: block;
+        width: 0px;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        border-top: 16px solid $secondary-bg;
+        
+        position: relative;
+        top: 7px;
+    }
+}
+
 
 @mixin truncate-ellipsis { 
     overflow: hidden; 

@@ -30,8 +30,8 @@ require.config({
   }
 });
  
-require(['pubsub', 'border-radius', 'text-shadow', 'columns', 'box-shadow', 'menu', 'snippets'],
-	function(ps, borderRadius, textShadow, columns, boxShadow, menu, snippets) {
+require(['pubsub', 'border-radius', 'text-shadow', 'columns', 'box-shadow', 'menu', 'snippets', 'copy-helper'],
+	function(ps, borderRadius, textShadow, columns, boxShadow, menu, snippets, copyHelper) {
 		'use strict';
 
 		console.log(borderRadius);

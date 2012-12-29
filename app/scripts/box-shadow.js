@@ -78,21 +78,7 @@ define(['jquery','css-object', 'pubsub'], function($, CSSObject, PS) {
 
 	$('#bs-copy-button').on('mousedown', function(e) {
 		e.preventDefault();
-		var offset = $('#bs-code').offset();
-		$('#bs-code').select();
-		$('#copy-helper').css({
-			left: offset.left,
-			top: offset.top
-		}).clearQueue().stop().fadeIn().delay(1000).fadeOut(200);
-	});
-
-	$('#bs-code').on('click', function() {
-		$(this).select();
-		var offset = $(this).offset();
-		$('#copy-helper').css({
-			left: offset.left,
-			top: offset.top
-		}).clearQueue().stop().fadeIn().delay(1000).fadeOut(200);
+		$('.copy-field').trigger('click');
 	});
 
 	PS.subscribe('boxShadowChange', function() {

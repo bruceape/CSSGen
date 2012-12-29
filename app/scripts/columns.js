@@ -43,20 +43,7 @@ define(['jquery','css-object', 'pubsub'], function($, CSSObject, PS) {
 
 	$('#col-copy-button').on('mousedown', function(e) {
 		e.preventDefault();
-		var offset = $('#col-code').offset();
-		$('#col-code').select();
-		$('#copy-helper').css({
-			left: offset.left,
-			top: offset.top
-		}).clearQueue().stop().fadeIn().delay(1000).fadeOut(200);
-	});
-	$('#col-code').on('click', function() {
-		$(this).select();
-		var offset = $(this).offset();
-		$('#copy-helper').css({
-			left: offset.left,
-			top: offset.top
-		}).clearQueue().stop().fadeIn().delay(1000).fadeOut(200);
+		$('.copy-field').trigger('click');
 	});
 
 	PS.subscribe('columnsChange', function() {

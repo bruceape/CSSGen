@@ -80,20 +80,7 @@ define(['jquery','css-object', 'pubsub'], function($, CSSObject, PS) {
 
 	$('#br-copy-button').on('mousedown', function(e) {
 		e.preventDefault();
-		var offset = $('#br-code').offset();
-		$('#br-code').select();
-		$('#copy-helper').css({
-			left: offset.left,
-			top: offset.top
-		}).clearQueue().stop().fadeIn().delay(1000).fadeOut(200);
-	});
-	$('#br-code').on('click', function() {
-		$(this).select();
-		var offset = $(this).offset();
-		$('#copy-helper').css({
-			left: offset.left,
-			top: offset.top
-		}).clearQueue().stop().fadeIn().delay(1000).fadeOut(200);
+		$('.copy-field').trigger('click');
 	});
 
 	PS.subscribe('borderRadiusChange', function() {

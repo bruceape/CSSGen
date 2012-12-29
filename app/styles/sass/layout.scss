@@ -103,6 +103,7 @@ body {
 }
 
 nav {
+	@include no-select;
 	@include clearfix;
 
 	border-top: 1px solid lighten($secondary-bg, 10);
@@ -127,6 +128,7 @@ nav {
 }
 
 .main-header {
+	@include no-select;
 	border-bottom: 1px solid lighten($secondary-bg, 20);
 	border-top: 1px solid darken($secondary-bg, 0);
 	box-shadow: 0 4px 5px -5px rgba(0,0,0, 1); 
@@ -147,12 +149,12 @@ nav {
 	}
 }
 
-article {
-	@include select;
-}
+// article {
+// 	@include select;
+// }
 
 .wrapper {
-	@include no-select;
+	// @include no-select;
 	
 	min-width: 320px;
 	overflow: hidden;
@@ -195,6 +197,7 @@ article {
 }
 
 .controls {
+	@include no-select;
 	@include clearfix;
 	min-height: 88px;
 	padding: 16px;
@@ -245,6 +248,7 @@ article {
 }
 
 .border-radius-preview {
+	@include no-select;
 	height: 300px;
 	max-width: 540px;
 
@@ -294,6 +298,7 @@ article {
 }
 
 .preview-container {
+	@include no-select;
     height: 180px;
     border-radius: 4px;
     border: 1px solid $preview-container-border;
@@ -311,6 +316,7 @@ article {
 .box-shadow-preview {
 	@extend .preview-container;
 	.preview {
+		@include no-select;
 		height: 96px;
 		border: 1px solid $preview-border;
 		box-shadow: 0 0 16px rgba(0,0,0, .4);
@@ -326,6 +332,7 @@ article {
 .text-shadow-preview {
 	@extend .preview-container;
 	.preview {
+		@include no-select;
 		height: 96px;
 		
 		position: relative;
@@ -343,6 +350,7 @@ article {
 	@extend .preview-container;
 	padding: 16px;
 	.preview {
+		@include no-select;
 		position: relative;
 		margin: 0 auto;
 
@@ -360,6 +368,7 @@ article {
 }
 
 .control-panel {
+	@include no-select;
 	@include clearfix;
 	margin: 0 auto;
 	@media all and ( min-width: $goldilocks) {

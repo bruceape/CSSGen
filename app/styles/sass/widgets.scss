@@ -27,6 +27,7 @@
 
 .snippet-header {
 	@include button;
+	@include no-select;
 }
 
 .download-link {
@@ -67,6 +68,7 @@
 
 .copy-button {
 	@include button;
+	@include no-select;
 }
 
 .unit-switch {

@@ -219,14 +219,14 @@ nav {
 	text-align: center;
 	&:last-child {
 		.name {
-			padding: 54px 8px 48px 8px;
+			padding: 64px 8px 48px 8px;
 		}
 	}
 }
 
 .name {
 	width: 25%;
-	padding: 54px 8px 48px 0;
+	padding: 64px 8px 48px 0;
 	
 	float: left;
 	margin: 0;
@@ -601,7 +601,7 @@ nav {
 	top: 12px;
 	margin: 0 auto;
 	@media all and (min-width: $goldilocks) {
-		margin: 44px 0;
+		margin: 44px auto;
 	}
 }
 

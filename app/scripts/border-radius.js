@@ -23,62 +23,43 @@ define(['jquery','css-object', 'pubsub'], function($, CSSObject, PS) {
 		}
 	});
 
-	$('#br-tr-increment').on('mousedown', function(e) {
+	$('.increment').on('mousedown', function(e){
 		e.preventDefault();
-		borderRadius.increment('topRight');
-	});
-	$('#br-br-increment').on('mousedown', function(e) {
-		e.preventDefault();
-		borderRadius.increment('bottomRight');
-	});
-	$('#br-tl-increment').on('mousedown', function(e) {
-		e.preventDefault();
-		borderRadius.increment('topLeft');
-	});
-	$('#br-bl-increment').on('mousedown', function(e) {
-		e.preventDefault();
-		borderRadius.increment('bottomLeft');
+		var currentDOM = $(this),
+			object = currentDOM.data('cssObject'),
+			property = currentDOM.data('cssProperty');
+
+		window[object].increment(property);
 	});
 
-	$('#br-tr-decrement').on('mousedown', function(e) {
+	$('.decrement').on('mousedown', function(e){
 		e.preventDefault();
-		borderRadius.decrement('topRight');
-	});
-	$('#br-br-decrement').on('mousedown', function(e) {
-		e.preventDefault();
-		borderRadius.decrement('bottomRight');
-	});
-	$('#br-tl-decrement').on('mousedown', function(e) {
-		e.preventDefault();
-		borderRadius.decrement('topLeft');
-	});
-	$('#br-bl-decrement').on('mousedown', function(e) {
-		e.preventDefault();
-		borderRadius.decrement('bottomLeft');
+		var currentDOM = $(this),
+			object = currentDOM.data('cssObject'),
+			property = currentDOM.data('cssProperty');
+
+		window[object].decrement(property);
 	});
 
-	$('#br-tl-field').on('input', function() {
-		borderRadius.set('topLeft', $('#br-tl-field').val());
-	});
-	$('#br-bl-field').on('input', function() {
-		borderRadius.set('bottomLeft', $('#br-bl-field').val());
-	});
-	$('#br-tr-field').on('input', function() {
-		borderRadius.set('topRight', $('#br-tr-field').val());
-	});
-	$('#br-br-field').on('input', function() {
-		borderRadius.set('bottomRight', $('#br-br-field').val());
+	$('.field').on('input', function() {
+		var currentDOM = $(this),
+			object = currentDOM.data('cssObject'),
+			property = currentDOM.data('cssProperty');
+
+		window[object].set(property, currentDOM.val());
 	});
 
-	$('#br-unittoggle').on('click', function() {
-		borderRadius.toggleUnit();
-
-	});
-	$('#br-linked').on('click', function() {
-		borderRadius.toggleLinked();
+	$('.onoff-switch').on('click', function() {
+		var object = $(this).data('cssObject');
+		window[object].toggleLinked();
 	});
 
-	$('#br-copy-button').on('mousedown', function(e) {
+	$('.unit-switch').on('click', function() {
+		var object = $(this).data('cssObject');
+		window[object].toggleUnit();
+	});
+
+	$('.copy-button').on('mousedown', function(e) {
 		e.preventDefault();
 		$('.copy-field').trigger('click');
 	});
@@ -91,34 +72,23 @@ define(['jquery','css-object', 'pubsub'], function($, CSSObject, PS) {
 			borderRadius.bottomRight = borderRadius.topLeft;
 			borderRadius.bottomLeft = borderRadius.topLeft;
 
-			$('#br-tr-decrement').addClass('disabled-decrement');
-			$('#br-br-decrement').addClass('disabled-decrement');
-			$('#br-bl-decrement').addClass('disabled-decrement');
-			$('#br-tr-increment').addClass('disabled-increment');
-			$('#br-br-increment').addClass('disabled-increment');
-			$('#br-bl-increment').addClass('disabled-increment');
+			$('.increment:not(#br-tl-increment)').addClass('disabled-increment');
+			$('.decrement:not(#br-tl-decrement)').addClass('disabled-decrement');
+			$('.field:not(#br-tl-field)').addClass('disabled-field').prop('disabled', true);
 
-			$('#br-tr-field').addClass('disabled-field').prop('disabled', true);
-			$('#br-br-field').addClass('disabled-field').prop('disabled', true);
-			$('#br-bl-field').addClass('disabled-field').prop('disabled', true);
 		} else {
-			$('#br-tr-decrement').removeClass('disabled-decrement');
-			$('#br-br-decrement').removeClass('disabled-decrement');
-			$('#br-bl-decrement').removeClass('disabled-decrement');
-			$('#br-tr-increment').removeClass('disabled-increment');
-			$('#br-br-increment').removeClass('disabled-increment');
-			$('#br-bl-increment').removeClass('disabled-increment');
-
-			$('#br-tr-field').removeClass('disabled-field').prop('disabled', false);
-			$('#br-br-field').removeClass('disabled-field').prop('disabled', false);
-			$('#br-bl-field').removeClass('disabled-field').prop('disabled', false);
+			$('.increment:not(#br-tl-increment)').removeClass('disabled-increment');
+			$('.decrement:not(#br-tl-decrement)').removeClass('disabled-decrement');
+			$('.field:not(#br-tl-field)').removeClass('disabled-field').prop('disabled', false);
 		}
 
 		//update values
-		$('#br-tr-field').val(borderRadius.topRight);
-		$('#br-tl-field').val(borderRadius.topLeft);
-		$('#br-br-field').val(borderRadius.bottomRight);
-		$('#br-bl-field').val(borderRadius.bottomLeft);
+		$('.field').val(function(){
+			var currentDOM = $(this),
+				object = currentDOM.data('cssObject'),
+				property = currentDOM.data('cssProperty');
+			return window[object][property];
+		});
 		
 		//update demo object
 		$('#br-preview').css('border-radius', borderRadius.theCss());
@@ -127,7 +97,6 @@ define(['jquery','css-object', 'pubsub'], function($, CSSObject, PS) {
 		output += 'border-radius: ' + borderRadius.theCss() + ';\r\n';
 		$('#br-code').val(output);
 
-		//check if linked
 	});
 
 	return borderRadius;

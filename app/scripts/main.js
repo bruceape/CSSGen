@@ -34,14 +34,10 @@ require(['pubsub', 'border-radius', 'text-shadow', 'columns', 'box-shadow', 'men
 	function(ps, borderRadius, textShadow, columns, boxShadow, menu, snippets, copyHelper) {
 		'use strict';
 
-		console.log(borderRadius);
-		console.log(boxShadow);
-		console.log(columns);
-		console.log(textShadow);
-		window.br = borderRadius;
-		window.col = columns;
-		window.bs = boxShadow;
-		window.ts = textShadow;
+		window.borderRadius = borderRadius;
+		window.columns = columns;
+		window.boxShadow = boxShadow;
+		window.textShadow = textShadow;
 		window.ps = ps;
 
 		window.Modernizr.load({

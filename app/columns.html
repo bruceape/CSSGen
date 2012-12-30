@@ -41,9 +41,9 @@
                         <div class="controls">
                             <div class="counter">
                                 <div class="counter-container">
-                                    <div id="col-count-increment" class="increment">Incrementing!</div>
-                                    <input type="number" pattern="[0-9]*" value="0" id="col-count-field" class="field">
-                                    <div id="col-count-decrement" class="decrement">Decrementing!</div>
+                                    <div class="increment" data-css-object="columns" data-css-property="count">Incrementing!</div>
+                                    <input type="number" pattern="[0-9]*" value="0" class="field" data-css-object="columns" data-css-property="count">
+                                    <div class="decrement" data-css-object="columns" data-css-property="count">Decrementing!</div>
                                 </div>
                             </div>
                         </div>
@@ -53,9 +53,9 @@
                         <div class="controls">
                             <div class="counter">
                                 <div class="counter-container">
-                                    <div id="col-gap-increment" class="increment">Incrementing!</div>
-                                    <input type="number" pattern="[0-9]*" value="0" id="col-gap-field" class="field">
-                                    <div id="col-gap-decrement" class="decrement">Decrementing!</div>
+                                    <div class="increment" data-css-object="columns" data-css-property="gap">Incrementing!</div>
+                                    <input type="number" pattern="[0-9]*" value="0" class="field" data-css-object="columns" data-css-property="gap">
+                                    <div class="decrement" data-css-object="columns" data-css-property="gap">Decrementing!</div>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
             </div>
 
             <div class="content">
-                <div id="col-copy-button" class="copy-button">Copy</div>
+                <div class="copy-button">Copy</div>
 
                 <textarea id="col-code" placeholder="Remember, give Bruce pizza!" class="copy-field"></textarea>
                 <article>

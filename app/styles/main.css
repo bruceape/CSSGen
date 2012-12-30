@@ -826,16 +826,16 @@ a:active, a:focus, a:hover {
         color: #999999;
         font-style: normal; }
 
-.onoff-switch {
+.onoff-switch, .inset-switch {
   display: block;
   width: 136px;
   height: 38px;
   padding: 3px 0;
   position: relative;
   -webkit-touch-callout: none; }
-  .onoff-switch:focus label i:after, .onoff-switch:hover label i:after {
+  .onoff-switch:focus label i:after, .onoff-switch:hover label i:after, .inset-switch:focus label i:after, .inset-switch:hover label i:after {
     background: #a5d27e; }
-  .onoff-switch input {
+  .onoff-switch input, .inset-switch input {
     width: 136px;
     height: 54px;
     position: absolute;
@@ -843,15 +843,15 @@ a:active, a:focus, a:hover {
     z-index: 100;
     opacity: 0;
     cursor: pointer; }
-    .onoff-switch input:checked ~ label i {
+    .onoff-switch input:checked ~ label i, .inset-switch input:checked ~ label i {
       right: -2px;
       left: auto; }
-    .onoff-switch input:checked ~ label i:before {
+    .onoff-switch input:checked ~ label i:before, .inset-switch input:checked ~ label i:before {
       content: "Off";
       right: 130%; }
-    .onoff-switch input:checked ~ label i:after {
+    .onoff-switch input:checked ~ label i:after, .inset-switch input:checked ~ label i:after {
       content: "On"; }
-  .onoff-switch label {
+  .onoff-switch label, .inset-switch label {
     display: block;
     width: 100%;
     height: 100%;
@@ -859,7 +859,7 @@ a:active, a:focus, a:hover {
     border-radius: 3px;
     position: relative;
     background: white; }
-    .onoff-switch label i {
+    .onoff-switch label i, .inset-switch label i {
       display: block;
       height: 38px;
       width: 72px;
@@ -870,7 +870,7 @@ a:active, a:focus, a:hover {
       z-index: 2;
       background: -webkit-linear-gradient(270deg, white 0%, #009245 100%);
       background: linear-gradient(180deg, white 0%, #009245 100%); }
-      .onoff-switch label i:after {
+      .onoff-switch label i:after, .inset-switch label i:after {
         content: "Off";
         width: 70px;
         height: 22px;
@@ -888,7 +888,7 @@ a:active, a:focus, a:hover {
         background: #8bc558;
         -webkit-transition: background 0.3s ease;
         transition: background 0.3s ease; }
-      .onoff-switch label i:before {
+      .onoff-switch label i:before, .inset-switch label i:before {
         content: "On";
         position: absolute;
         top: 60%;
@@ -1454,11 +1454,11 @@ nav {
     .unit-switch {
       margin: 44px 0; } }
 
-.onoff-switch {
+.onoff-switch, .inset-switch {
   top: 12px;
   margin: 0 auto; }
   @media all and (min-width: 540px) {
-    .onoff-switch {
+    .onoff-switch, .inset-switch {
       margin: 44px 0; } }
 
 .field {

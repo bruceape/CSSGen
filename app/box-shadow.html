@@ -39,8 +39,8 @@
                     <div class="widget inset">
                         <p class="label">Inset</p>
                         <div class="controls">
-                            <div class="onoff-switch">
-                                <input id="bs-insettoggle" type="checkbox">
+                            <div class="inset-switch" data-css-object="boxShadow">
+                                <input type="checkbox">
                                 <label><i></i></label>
                             </div> 
                         </div>
@@ -52,17 +52,17 @@
                             <div class="counter">
                                 <p class="name">X</p>
                                 <div class="counter-container">
-                                    <div id="bs-x-increment" class="increment">Incrementing!</div>
-                                    <input type="number" pattern="[0-9]*" value="0" id="bs-x-field" class="field">
-                                    <div id="bs-x-decrement" class="decrement">Decrementing!</div>
+                                    <div class="increment" data-css-object="boxShadow" data-css-property="x">Incrementing!</div>
+                                    <input type="number" pattern="[0-9]*" value="0" class="field" data-css-object="boxShadow" data-css-property="x">
+                                    <div class="decrement" data-css-object="boxShadow" data-css-property="x">Decrementing!</div>
                                 </div>
                             </div>
                             <div class="counter">
                                 <p class="name">Y</p>
                                 <div class="counter-container">
-                                    <div id="bs-y-increment" class="increment">Incrementing!</div>
-                                    <input type="number" pattern="[0-9]*" value="0" id="bs-y-field" class="field">
-                                    <div id="bs-y-decrement" class="decrement">Decrementing!</div>
+                                    <div class="increment" data-css-object="boxShadow" data-css-property="y">Incrementing!</div>
+                                    <input type="number" pattern="[0-9]*" value="0" class="field" data-css-object="boxShadow" data-css-property="y">
+                                    <div class="decrement" data-css-object="boxShadow" data-css-property="y">Decrementing!</div>
                                 </div>
                             </div>
                         </div>
@@ -71,12 +71,12 @@
                     <div class="widget blur">
                         <p class="label">Blur</p>
                         <div class="controls">
-                            <input type="range" id="bs-blur" value="0" class='slider'>
+                            <input type="range" value="0" class='slider' data-css-object="boxShadow" data-css-property="blur">
                             <div class="counter blur-counter">
                                 <div class="counter-container">
-                                    <div id="bs-blur-increment" class="increment">Incrementing!</div>
-                                    <input type="number" pattern="[0-9]*" value="0" id="bs-blur-field" class="field">
-                                    <div id="bs-blur-decrement" class="decrement">Decrementing!</div>
+                                    <div class="increment" data-css-object="boxShadow" data-css-property="blur">Incrementing!</div>
+                                    <input type="number" pattern="[0-9]*" value="0" class="field" data-css-object="boxShadow" data-css-property="blur">
+                                    <div class="decrement" data-css-object="boxShadow" data-css-property="blur">Decrementing!</div>
                                 </div>
                             </div>
                         </div>
@@ -85,12 +85,12 @@
                      <div class="widget spread">
                         <p class="label">Spread</p>
                         <div class="controls">
-                            <input type="range" id="bs-spread" value="0" class='slider'>
+                            <input type="range" value="0" class='slider' data-css-object="boxShadow" data-css-property="spread">
                             <div class="counter spread-counter">
                                 <div class="counter-container">
-                                    <div id="bs-spread-increment" class="increment">Incrementing!</div>
-                                    <input type="number" pattern="[0-9]*" value="0" max="50" id="bs-spread-field" class="field">
-                                    <div id="bs-spread-decrement" class="decrement">Decrementing!</div>
+                                    <div class="increment" data-css-object="boxShadow" data-css-property="spread">Incrementing!</div>
+                                    <input type="number" pattern="[0-9]*" value="0" max="50" class="field" data-css-object="boxShadow" data-css-property="spread">
+                                    <div class="decrement" data-css-object="boxShadow" data-css-property="spread">Decrementing!</div>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
             </div>
 
             <div class="content">
-                <div id="bs-copy-button" class="copy-button">Copy</div>
+                <div class="copy-button">Copy</div>
 
                 <textarea id="bs-code" placeholder="Remember, give Bruce pizza!" class="copy-field"></textarea>
                 <article>

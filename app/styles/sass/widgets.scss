@@ -75,7 +75,7 @@
 	@include switch('%', 'Px');
 }
 
-.onoff-switch {
+.onoff-switch, .inset-switch {
 	@include switch('Off', 'On');
 }
 

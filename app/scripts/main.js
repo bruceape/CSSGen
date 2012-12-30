@@ -30,15 +30,14 @@ require.config({
   }
 });
  
-require(['pubsub', 'border-radius', 'text-shadow', 'columns', 'box-shadow', 'menu', 'snippets', 'copy-helper'],
-	function(ps, borderRadius, textShadow, columns, boxShadow, menu, snippets, copyHelper) {
+require(['pubsub', 'border-radius', 'text-shadow', 'columns', 'box-shadow', 'menu', 'snippets', 'copy-helper', 'view-bind'],
+	function(ps, borderRadius, textShadow, columns, boxShadow, menu, snippets, copyHelper, viewBind) {
 		'use strict';
 
 		window.borderRadius = borderRadius;
 		window.columns = columns;
 		window.boxShadow = boxShadow;
 		window.textShadow = textShadow;
-		window.ps = ps;
 
 		window.Modernizr.load({
 		  test: window.Modernizr.range,

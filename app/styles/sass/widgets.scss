@@ -32,17 +32,25 @@
 
 .download-link {
 	&:before {
-		content: '\2b07';
+		content: 'F';
+		font-family: 'WebSymbolsRegular';
+		font-size: 14px;
+		position: relative;
+		top: -3px;
 		display: inline-block;
-		width: 20px;
+		width: 24px;
 	}
 }
 
 .external-link {
 	&:before {
-		content: '\25F3';
+		content: 'D';
+		font-family: 'WebSymbolsRegular';
+		font-size: 14px;
+		position: relative;
+		top: -3px;
 		display: inline-block;
-		width: 20px;
+		width: 24px;
 	}
 }
 

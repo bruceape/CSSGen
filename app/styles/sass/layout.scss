@@ -94,8 +94,16 @@ body {
 	background: $secondary-bg;
 	-webkit-transition: background 0.3s ease;
 	transition: background 0.3s ease;
+	&:after {
+		content: '²';
+		font-family: 'WebSymbolsRegular';
+		font-size: 24px;
+		position: relative;
+		top: -3px;
+	}
 	&:hover, &:focus, &:active {
 		background: $secondary-bg-hover;
+		color: $body-text-color;
 	}
 	@media all and (min-width: $goldilocks) {
 		display: none;
@@ -151,6 +159,7 @@ nav {
 
 .wrapper {
 	min-width: 320px;
+	padding-bottom: 6em;
 	overflow: hidden;
 	
 	margin: 0 auto;

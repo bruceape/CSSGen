@@ -427,6 +427,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: 'WebSymbolsRegular';
+  src: url("fonts/websymbols-regular-webfont.eot");
+  src: url("fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/websymbols-regular-webfont.woff") format("woff"), url("fonts/websymbols-regular-webfont.ttf") format("truetype"), url("fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 html {
   -webkit-font-smoothing: antialiased; }
 
@@ -610,14 +617,22 @@ a:active, a:focus, a:hover {
     background: #a5d27e; }
 
 .download-link:before {
-  content: '\2b07';
+  content: 'F';
+  font-family: 'WebSymbolsRegular';
+  font-size: 14px;
+  position: relative;
+  top: -3px;
   display: inline-block;
-  width: 20px; }
+  width: 24px; }
 
 .external-link:before {
-  content: '\25F3';
+  content: 'D';
+  font-family: 'WebSymbolsRegular';
+  font-size: 14px;
+  position: relative;
+  top: -3px;
   display: inline-block;
-  width: 20px; }
+  width: 24px; }
 
 .snippet-link {
   -moz-user-select: -moz-none;
@@ -653,9 +668,10 @@ a:active, a:focus, a:hover {
 
 .slider {
   -webkit-appearance: none !important;
-  height: 8px;
+  height: 12px;
   padding: 0;
-  border-radius: 4px;
+  border-radius: 6px;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.3);
   box-sizing: content-box;
   overflow: visible;
   width: 100%;
@@ -664,9 +680,9 @@ a:active, a:focus, a:hover {
     display: none; }
   .slider::-ms-track, .slider::-ms-fill-lower {
     color: white;
-    height: 8px;
+    height: 12px;
     overflow: visible;
-    border-radius: 4px;
+    border-radius: 6px;
     border: 0;
     background: white; }
   .slider::-ms-thumb {
@@ -1048,8 +1064,15 @@ body {
   background: #1a1a1a;
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease; }
+  .menu-link:after {
+    content: '²';
+    font-family: 'WebSymbolsRegular';
+    font-size: 24px;
+    position: relative;
+    top: -3px; }
   .menu-link:hover, .menu-link:focus, .menu-link:active {
-    background: #272727; }
+    background: #272727;
+    color: white; }
   @media all and (min-width: 540px) {
     .menu-link {
       display: none; } }
@@ -1102,6 +1125,7 @@ nav {
 
 .wrapper {
   min-width: 320px;
+  padding-bottom: 6em;
   overflow: hidden;
   margin: 0 auto; }
   @media all and (min-width: 540px) {

@@ -695,6 +695,7 @@ a:active, a:focus, a:hover {
     -webkit-appearance: none !important;
     background-color: transparent;
     background: #8bc558;
+    border: 0;
     border-radius: 50%;
     height: 32px;
     width: 32px;

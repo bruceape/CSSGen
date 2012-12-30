@@ -7,11 +7,11 @@ define(['jquery'], function($) {
 			moveEvent = isTouchSupported ? 'touchmove' : 'mousemove',
 			endEvent = isTouchSupported ? 'touchend' : 'mouseup';
 
-		$('.snippet-header').on(endEvent, function(){
+		$('.snippet-header').on(startEvent, function(){
 			$(this).next().slideToggle();
 		});
 
-		$('.copy-link').on(endEvent, function(){
+		$('.copy-link').on(startEvent, function(){
 			$(this).next().trigger('click');
 		});
 	});

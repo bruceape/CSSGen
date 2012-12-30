@@ -2,6 +2,25 @@ define(['jquery'], function($, CSSObject, PS) {
 
 	'use strict';
 	$(document).ready(function() {
+
+		$('.increment').on('touchstart', function(e){
+			e.preventDefault();
+			var currentDOM = $(this),
+				object = currentDOM.data('cssObject'),
+				property = currentDOM.data('cssProperty');
+
+			window[object].increment(property);
+		});
+
+		$('.decrement').on('touchstart', function(e){
+			e.preventDefault();
+			var currentDOM = $(this),
+				object = currentDOM.data('cssObject'),
+				property = currentDOM.data('cssProperty');
+
+			window[object].decrement(property);
+		});
+
 		$('.increment').on('mousedown', function(e){
 			e.preventDefault();
 			var currentDOM = $(this),

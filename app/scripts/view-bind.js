@@ -2,7 +2,12 @@ define(['jquery'], function($, CSSObject, PS) {
 
 	'use strict';
 	$(document).ready(function() {
-		$('.increment').on('mousedown', function(e){
+		var isTouchSupported = 'ontouchstart' in window,
+			startEvent = isTouchSupported ? 'touchstart' : 'mousedown',
+			moveEvent = isTouchSupported ? 'touchmove' : 'mousemove',
+			endEvent = isTouchSupported ? 'touchend' : 'mouseup';
+
+		$('.increment').on(endEvent, function(e){
 			e.preventDefault();
 			var currentDOM = $(this),
 				object = currentDOM.data('cssObject'),
@@ -11,7 +16,7 @@ define(['jquery'], function($, CSSObject, PS) {
 			window[object].increment(property);
 		});
 
-		$('.decrement').on('mousedown', function(e){
+		$('.decrement').on(endEvent, function(e){
 			e.preventDefault();
 			var currentDOM = $(this),
 				object = currentDOM.data('cssObject'),
@@ -36,22 +41,22 @@ define(['jquery'], function($, CSSObject, PS) {
 			window[object].set(property, currentDOM.val());
 		});
 
-		$('.onoff-switch').on('click', function() {
+		$('.onoff-switch').on(startEvent, function() {
 			var object = $(this).data('cssObject');
 			window[object].toggleLinked();
 		});
 
-		$('.unit-switch').on('click', function() {
+		$('.unit-switch').on(startEvent, function() {
 			var object = $(this).data('cssObject');
 			window[object].toggleUnit();
 		});
 
-		$('.inset-switch').on('click', function() {
+		$('.inset-switch').on(startEvent, function() {
 			var object = $(this).data('cssObject');
 			window[object].toggleInset();
 		});
 
-		$('.copy-button').on('mousedown', function(e) {
+		$('.copy-button').on(startEvent, function(e) {
 			e.preventDefault();
 			$('.copy-field').trigger('click');
 		});

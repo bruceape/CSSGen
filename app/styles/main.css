@@ -669,13 +669,15 @@ a:active, a:focus, a:hover {
 .slider {
   -webkit-appearance: none !important;
   height: 12px;
+  width: 100%;
   padding: 0;
   border-radius: 6px;
   box-shadow: 0 0 16px rgba(255, 255, 255, 0.3);
   box-sizing: content-box;
   overflow: visible;
-  width: 100%;
-  margin: 24px 0; }
+  margin: 24px 0;
+  text-align: center;
+  font-size: 12px; }
   .slider::-ms-tooltip {
     display: none; }
   .slider::-ms-track, .slider::-ms-fill-lower {

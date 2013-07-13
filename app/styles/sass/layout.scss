@@ -11,10 +11,10 @@ body {
 .menu {
 	padding: 0;
 	overflow: hidden;
-	
+
 	height: 0;
 	margin: 0;
-	
+
 	background: $primary-bg;
 	@media all and (min-width: $goldilocks) {
 		height: auto;
@@ -32,19 +32,20 @@ body {
 	padding: 16px 0 0 0;
 	border-bottom: 1px solid lighten($secondary-bg, 10);
 	border-right: 1px solid lighten($secondary-bg, 3);
-	box-shadow: 0 16px 16px -16px rgba(0,0,0, .4); 
+	box-shadow: 0 16px 16px -16px rgba(0,0,0, .4);
 
 	float: left;
 	width: 50%;
 	height: 48px;
-	
+
 	font-size: 14px;
 	text-align: center;
 	text-transform: uppercase;
-	
+
 	background: $secondary-bg;
 	-webkit-transition: background 0.3s ease;
 	transition: background 0.3s ease;
+	font-weight: 400;
 	@media all and (min-width: $goldilocks) {
 		height: 128px;
 		width: 100%;
@@ -53,12 +54,12 @@ body {
 		border-left: 1px solid lighten($primary-bg, 10);
 		box-shadow: inset 0 1px 0 rgba(0,0,0, 1),
 					inset 0 17px 24px -16px rgba(0,0,0, .6),
-					0 4px 8px -2px rgba(0,0,0, .4); 
-					
+					0 4px 8px -2px rgba(0,0,0, .4);
+
 		font-size: 12px;
 		letter-spacing: .15em;
 
-		background: $primary-bg;
+		// background: $primary-bg;
 	}
 	&:visited, &:link {
 		color: $body-text-color;
@@ -66,7 +67,7 @@ body {
 	}
 	&:hover, &:active, &:focus {
 		background: lighten($primary-bg, 5);
-	}	
+	}
 }
 
 .active-menu-item {
@@ -77,7 +78,7 @@ body {
 	background: $secondary-active;
 	&:hover, &:active, &:focus {
 		background: $secondary-active-hover;
-	}	
+	}
 }
 
 .menu-link {
@@ -85,12 +86,12 @@ body {
 	width: 100%;
 	height: 48px;
 	padding:  0px 16px 0 0;
-	
+
 	font-size: 32px;
 	text-align: right;
 	text-decoration: none;
 	color: $body-text-color;
-	
+
 	background: $secondary-bg;
 	-webkit-transition: background 0.3s ease;
 	transition: background 0.3s ease;
@@ -120,13 +121,14 @@ nav {
 				0 0px 16px rgba(0,0,0, .8);
 
 	z-index: 9999;
-	
+
 	background: $secondary-bg;
 	@media all and (min-width: $goldilocks) {
 		width: 128px;
-		box-shadow: 0 0 32px rgba(0,0,0, .4);
+		box-shadow: 0 1px black,
+					0 0px 16px rgba(0,0,0, .5);
 		border: 0;
-		
+
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -139,21 +141,21 @@ nav {
 	@include no-select;
 	border-bottom: 1px solid lighten($secondary-bg, 20);
 	border-top: 1px solid darken($secondary-bg, 0);
-	box-shadow: 0 4px 5px -5px rgba(0,0,0, 1); 
-	
+	box-shadow: 0 4px 5px -5px rgba(0,0,0, 1);
+
 	position: relative;
 
 	text-align: center;
 	@media all and (min-width: $goldilocks) {
 		height: 128px;
-		padding: 16px 0 0 64px;
+		// padding: 16px 0 0 64px;
 		border-bottom: 1px solid lighten($primary-bg, 10);
 		border-top: 1px solid darken($primary-bg, 0);
-		box-shadow: 0 4px 5px -5px rgba(0,0,0, 1); 
+		box-shadow: 0 4px 5px -5px rgba(0,0,0, 1);
 
 		margin-left: 128px;
-		
-		text-align: left;
+
+		// text-align: left;
 	}
 }
 
@@ -161,12 +163,12 @@ nav {
 	min-width: 320px;
 	padding-bottom: 6em;
 	overflow: hidden;
-	
+
 	margin: 0 auto;
 	@media all and (min-width: $goldilocks) {
 		width: auto;
 		max-width: 648px;
-	
+
 		margin-left: 128px;
 	}
 }
@@ -177,14 +179,14 @@ nav {
 
 	position: relative;
 	margin: 0 auto;
-	
+
 }
 
 .label {
 	height: 100%;
 	width: 88px;
 	padding: 36px 0 0 8px;
-	
+
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -192,6 +194,7 @@ nav {
 	@media all and (min-width: $goldilocks) {
 		width: 100%;
 		padding: 32px 0;
+		font-size: 18px;
 
 		position: relative;
 
@@ -204,7 +207,7 @@ nav {
 	@include clearfix;
 	min-height: 88px;
 	padding: 16px;
-	
+
 	position: relative;
 	@media all and (min-width: $goldilocks) {
 		width: 100%;
@@ -236,7 +239,7 @@ nav {
 .name {
 	width: 25%;
 	padding: 64px 8px 48px 0;
-	
+
 	float: left;
 	margin: 0;
 
@@ -261,11 +264,11 @@ nav {
 		height: 96px;
 		border: 1px solid $preview-border;
 		box-shadow: 0 0 16px rgba(0,0,0, .4);
-		
+
 		position: relative;
 		top: 100px;
 		margin: 0 96px;
-		
+
 		background: $preview-bg;
 	}
 	.counter {
@@ -285,7 +288,7 @@ nav {
 	}
 	.top-right {
 		position: absolute;
-		right: 16px;	
+		right: 16px;
 		top: 16px;
 	}
 	.bottom-left {
@@ -295,7 +298,7 @@ nav {
 	}
 	.bottom-right {
 		position: absolute;
-		right: 16px;	
+		right: 16px;
 		bottom: 16px;
 	}
 }
@@ -306,7 +309,7 @@ nav {
     border-radius: 4px;
     border: 1px solid $preview-container-border;
     overflow: hidden;
-    
+
     position: relative;
     margin: 16px;
 
@@ -327,7 +330,7 @@ nav {
 		position: relative;
 		top: 40px;
 		margin: 0 96px;
-		
+
 		background: $preview-bg;
 	}
 }
@@ -337,7 +340,7 @@ nav {
 	.preview {
 		@include no-select;
 		height: 96px;
-		
+
 		position: relative;
 		top: 48px;
 		margin: 0 auto;
@@ -384,12 +387,12 @@ nav {
 			height: 32px;
 			border-bottom: 1px solid lighten($primary-bg, 10);
 			border-top: 1px solid darken($primary-bg, 0);
-			box-shadow: 0 4px 5px -5px rgba(0,0,0, 1); 
+			box-shadow: 0 4px 5px -5px rgba(0,0,0, 1);
 
 			position: absolute;
 			top: 172px;
 			left: 0;
-			
+
 		}
 	}
 }
@@ -398,7 +401,7 @@ nav {
 	@media all and (max-width: $goldilocks) {
 		.widget {
 			border-bottom: 1px solid lighten($primary-bg, 10);
-			box-shadow: 0 4px 5px -5px rgba(0,0,0, 1); 
+			box-shadow: 0 4px 5px -5px rgba(0,0,0, 1);
 			&:last-child {
 				border: 0;
 				box-shadow: none;
@@ -415,7 +418,7 @@ nav {
 		.widget {
 			width: 50%;
 			border-right: 1px solid lighten($primary-bg, 10);
-			
+
 			float: left;
 			&:last-child {
 				border: 0;
@@ -432,7 +435,7 @@ nav {
 	@media all and (max-width: $goldilocks) {
 		.widget {
 			border-bottom: 1px solid lighten($primary-bg, 10);
-			box-shadow: 0 4px 5px -5px rgba(0,0,0, 1); 
+			box-shadow: 0 4px 5px -5px rgba(0,0,0, 1);
 			&:last-child {
 				border: 0;
 				box-shadow: none;
@@ -496,7 +499,7 @@ nav {
 	@media all and (max-width: $goldilocks) {
 		.widget {
 			border-bottom: 1px solid lighten($primary-bg, 10);
-			box-shadow: 0 4px 5px -5px rgba(0,0,0, 1); 
+			box-shadow: 0 4px 5px -5px rgba(0,0,0, 1);
 			&:last-child {
 				border: 0;
 				box-shadow: none;
@@ -523,7 +526,7 @@ nav {
 	@media all and (max-width: $goldilocks) {
 		.widget {
 			border-bottom: 1px solid lighten($primary-bg, 10);
-			box-shadow: 0 4px 5px -5px rgba(0,0,0, 1); 
+			box-shadow: 0 4px 5px -5px rgba(0,0,0, 1);
 			&:last-child {
 				border: 0;
 				box-shadow: none;
@@ -562,12 +565,12 @@ nav {
 	padding: 0;
 
 	margin: 0;
-	li { 
+	li {
 		@include clearfix;
 
 		padding: 8px 0;
 
-		list-style: none; 
+		list-style: none;
 		&:last-child {
 			margin: 0 0 44px 0;
 		}

@@ -170,7 +170,7 @@ kbd,
 pre,
 samp {
   font-family: monospace, serif;
-  _font-family: "courier new", monospace;
+  _font-family: 'courier new', monospace;
   font-size: 1em; }
 
 /*
@@ -289,7 +289,7 @@ form {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -438,7 +438,7 @@ html {
   -webkit-font-smoothing: antialiased; }
 
 body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Ubuntu", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   color: white;
   font-size: 14px;
@@ -446,17 +446,18 @@ body {
 
 h1 {
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
-  padding: 0.5em 0 0.3em 0;
+  padding: .5em 0 .3em 0;
   text-shadow: 0 0 64px rgba(255, 255, 255, 0.6); }
   @media all and (min-width: 540px) {
     h1 {
       font-size: 48px;
-      text-shadow: 0 0 64px rgba(255, 255, 255, 0.6); } }
+      text-shadow: 0 0 64px rgba(255, 255, 255, 0.6);
+      max-width: 648px; } }
 
 h2 {
-  font-weight: 300; }
+  font-weight: 400; }
 
 a, a:link, a:visited {
   color: white; }
@@ -931,7 +932,7 @@ a:active, a:focus, a:hover {
   background: lightgray; }
 
 code, pre {
-  font-family: "Monaco", "Andale Mono", "Courier New", monospace; }
+  font-family: 'Monaco', 'Andale Mono', 'Courier New', monospace; }
 
 pre {
   padding: 8px;
@@ -979,7 +980,7 @@ pre {
   height: 44px;
   padding: 0 4px;
   overflow: hidden;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 44px;
   color: white;
   text-decoration: none; }
@@ -1029,7 +1030,8 @@ body {
   text-transform: uppercase;
   background: #1a1a1a;
   -webkit-transition: background 0.3s ease;
-  transition: background 0.3s ease; }
+  transition: background 0.3s ease;
+  font-weight: 400; }
   @media all and (min-width: 540px) {
     .menu-item {
       height: 128px;
@@ -1039,8 +1041,7 @@ body {
       border-left: 1px solid #4d4d4d;
       box-shadow: inset 0 1px 0 black, inset 0 17px 24px -16px rgba(0, 0, 0, 0.6), 0 4px 8px -2px rgba(0, 0, 0, 0.4);
       font-size: 12px;
-      letter-spacing: .15em;
-      background: #333333; } }
+      letter-spacing: .15em; } }
   .menu-item:visited, .menu-item:link {
     color: white;
     text-decoration: none; }
@@ -1098,7 +1099,7 @@ nav {
   @media all and (min-width: 540px) {
     nav {
       width: 128px;
-      box-shadow: 0 0 32px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 1px black, 0 0px 16px rgba(0, 0, 0, 0.5);
       border: 0;
       position: absolute;
       left: 0;
@@ -1119,12 +1120,10 @@ nav {
   @media all and (min-width: 540px) {
     .main-header {
       height: 128px;
-      padding: 16px 0 0 64px;
       border-bottom: 1px solid #4d4d4d;
       border-top: 1px solid #333333;
       box-shadow: 0 4px 5px -5px black;
-      margin-left: 128px;
-      text-align: left; } }
+      margin-left: 128px; } }
 
 .wrapper {
   min-width: 320px;
@@ -1155,6 +1154,7 @@ nav {
     .label {
       width: 100%;
       padding: 32px 0;
+      font-size: 18px;
       position: relative;
       text-align: center; } }
 
